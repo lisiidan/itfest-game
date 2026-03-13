@@ -4,7 +4,7 @@ extends Node2D
 
 var level_data = {
 	"goal": "CO2",
-	"reagents": ["HCl", "NaOH", "CaCO3"]
+	"reagents": ["Water", "Salt", "Hydrogen", "Chlorine"]
 }
 
 func _ready():
