@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://314f5jioymn4"]
+
+[ext_resource type="Texture2D" uid="uid://cur5o1xjngjfw" path="res://assets/sprites/MixingKolbaPlaceholder.png" id="1_dgxpa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_57pj2"]
+size = Vector2(32, 32)
+
+[node name="MixingFlask" type="Area2D"]
+scale = Vector2(8, 8)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_dgxpa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("RectangleShape2D_57pj2")
