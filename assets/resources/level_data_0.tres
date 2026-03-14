@@ -4,12 +4,7 @@
 
 [resource]
 script = ExtResource("1_ulrpm")
-goal_text = "Task 1:
-I want to drink, produce some water
-
-Task 2:
-Make the gas we exhale
-
-Task 3:
-Create the gas that smell like rotten egg"
 reagents = Array[String](["hydrogen", "oxygen", "nitrogen", "chlorine", "carbon", "sodium", "sulfur", "calcium"])
+intro_text = "Today we will study simple reactions."
+goals = Array[String](["Create water.", "Make the gas we exhale", "Create the gas that smell like rotten eggs"])
+goal_results = Array[String](["H2O", "CO2", "H2S"])

@@ -3,7 +3,7 @@ extends Node2D
 @onready var goal_board: Node2D = $GoalBoard
 @onready var reagent_shelf: Node2D = $ReagentShelf
 
-var level_index := 9
+var level_index := 0
 var current_level: LevelData
 
 func _ready():
@@ -14,7 +14,8 @@ func load_level(index: int):
 	current_level = load(path) as LevelData
 
 	reagent_shelf.spawn_reagents(current_level.reagents)
-	goal_board.show_goal(current_level.goal_text)
+	goal_board.show_goal(current_level.intro_text)
+	goal_board.setup_goals(current_level.goals, current_level.goal_results)
 
 func parse_cell(cell: String) -> Dictionary:
 	cell = cell.strip_edges()
