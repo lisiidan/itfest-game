@@ -1,18 +1,24 @@
-[gd_scene load_steps=9 format=3 uid="uid://bv67if74gx2px"]
+[gd_scene load_steps=13 format=3 uid="uid://bv67if74gx2px"]
 
 [ext_resource type="Script" uid="uid://cqhgggoc6cthm" path="res://scripts/game_scene.gd" id="1_mixcd"]
 [ext_resource type="Texture2D" uid="uid://c1m2wbfgqcxc1" path="res://assets/sprites/GameScenePlaceholder.png" id="1_mlf6e"]
+[ext_resource type="Resource" uid="uid://bqogdmey5lkop" path="res://assets/resources/level_data_0.tres" id="2_b5spy"]
 [ext_resource type="Script" uid="uid://k13rfv5ilnri" path="res://scripts/ReactionSystem.gd" id="2_kk2rg"]
 [ext_resource type="Script" uid="uid://cfqfkj0gr7us7" path="res://scripts/reagent_shelf.gd" id="3_mj2jn"]
 [ext_resource type="Texture2D" uid="uid://cur5o1xjngjfw" path="res://assets/sprites/MixingKolbaPlaceholder.png" id="3_v1wow"]
 [ext_resource type="PackedScene" uid="uid://bjuduo12raoq2" path="res://scenes/reagent_item.tscn" id="4_kdryc"]
 [ext_resource type="Script" uid="uid://cbjygos1gwhuo" path="res://scripts/mixer_flask.gd" id="5_kdryc"]
+[ext_resource type="FontFile" uid="uid://dpuydgwylexvh" path="res://assets/fonts/EraserRegular.ttf" id="9_mw25s"]
+[ext_resource type="Script" uid="uid://c3oya1a4ups1u" path="res://scripts/goal_board.gd" id="9_utbpp"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mixcd"]
 texture = ExtResource("3_v1wow")
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mw25s"]
+
 [node name="GameScene" type="Node2D"]
 script = ExtResource("1_mixcd")
+current_level = ExtResource("2_b5spy")
 
 [node name="ReactionSystem" type="Node2D" parent="."]
 script = ExtResource("2_kk2rg")
@@ -33,10 +39,10 @@ metadata/_edit_use_anchors_ = true
 
 [node name="ReagentShelf" type="Control" parent="UI/LabUI"]
 anchors_preset = 0
-offset_left = 670.0
-offset_top = 22.0
-offset_right = 1152.0
-offset_bottom = 436.0
+offset_left = 706.0
+offset_top = 52.0
+offset_right = 1147.0
+offset_bottom = 401.0
 script = ExtResource("3_mj2jn")
 reagent_scene = ExtResource("4_kdryc")
 
@@ -55,3 +61,20 @@ offset_left = 200.0
 offset_top = 91.0
 offset_right = 499.0
 offset_bottom = 177.0
+
+[node name="GoalBoard" type="Panel" parent="UI"]
+offset_left = 76.0
+offset_top = 79.0
+offset_right = 570.0
+offset_bottom = 342.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_mw25s")
+script = ExtResource("9_utbpp")
+
+[node name="GoalText" type="RichTextLabel" parent="UI/GoalBoard"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("9_mw25s")

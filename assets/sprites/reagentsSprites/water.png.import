@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://kl8afglmc24o"
-path="res://.godot/imported/sulf.png-d20e7160abb08e680fb4a58c054089ee.ctex"
+uid="uid://cch38se55g8s2"
+path="res://.godot/imported/water.png-5fdb3618b503297d0bf1bd4351e9c55e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/reagentsSprites/sulf.png"
-dest_files=["res://.godot/imported/sulf.png-d20e7160abb08e680fb4a58c054089ee.ctex"]
+source_file="res://assets/sprites/reagentsSprites/water.png"
+dest_files=["res://.godot/imported/water.png-5fdb3618b503297d0bf1bd4351e9c55e.ctex"]
 
 [params]
 

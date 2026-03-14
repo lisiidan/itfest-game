@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1gd2itd3t41d"
-path="res://.godot/imported/nytrogen.png-a744e70869a7b821e0167127d9eba57f.ctex"
+uid="uid://dmssawgn1sx4q"
+path="res://.godot/imported/sulfur.png-a2f00a991a708bf43646e38370d45489.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/reagentsSprites/nytrogen.png"
-dest_files=["res://.godot/imported/nytrogen.png-a744e70869a7b821e0167127d9eba57f.ctex"]
+source_file="res://assets/sprites/reagentsSprites/sulfur.png"
+dest_files=["res://.godot/imported/sulfur.png-a2f00a991a708bf43646e38370d45489.ctex"]
 
 [params]
 
