@@ -1,0 +1,15 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://do4lwnsh7sodh"
+valid=false
+
+[deps]
+
+source_file="res://assets/resources/reactii_final.csv"
+
+[params]
+
+compress=true
+delimiter=0

@@ -1,11 +1,11 @@
-extends Control
+extends Node2D
 
 @export var reagent_scene: PackedScene
 
-const PER_ROW := 5
-const MAX_REAGENTS := 15
-const CELL_W := 120
-const CELL_H := 120
+const PER_ROW := 6
+const MAX_REAGENTS := 24
+const CELL_W := 130
+const CELL_H := 155
 
 func spawn_reagents(reagents: Array):
 	for i in min(reagents.size(), MAX_REAGENTS):

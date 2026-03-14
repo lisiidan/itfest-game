@@ -1,9 +1,9 @@
 extends Node2D
 
-@onready var reagent_shelf: Control = $UI/LabUI/ReagentShelf
-@onready var goal_board: Panel = $UI/GoalBoard
+@onready var goal_board: Node2D = $GoalBoard
+@onready var reagent_shelf: Node2D = $ReagentShelf
 
-var level_index := 0
+var level_index := 1
 var current_level: LevelData
 
 func _ready():
@@ -15,3 +15,23 @@ func load_level(index: int):
 
 	reagent_shelf.spawn_reagents(current_level.reagents)
 	goal_board.show_goal(current_level.goal_text)
+
+func parse_cell(cell: String) -> Dictionary:
+	cell = cell.strip_edges()
+
+	if cell == "-":
+		return {"type":"neutral","result":""}
+
+	if cell.begins_with("p:"):
+		return {
+			"type":"positive",
+			"result":cell.substr(2)
+		}
+
+	if cell.begins_with("b:"):
+		return {
+			"type":"bonus",
+			"result":cell.substr(2)
+		}
+
+	return {"type":"neutral","result":""}

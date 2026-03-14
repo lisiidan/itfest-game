@@ -1,8 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://bv67if74gx2px"]
+[gd_scene load_steps=11 format=3 uid="uid://bv67if74gx2px"]
 
 [ext_resource type="Script" uid="uid://cqhgggoc6cthm" path="res://scripts/game_scene.gd" id="1_mixcd"]
 [ext_resource type="Texture2D" uid="uid://c1m2wbfgqcxc1" path="res://assets/sprites/GameScenePlaceholder.png" id="1_mlf6e"]
-[ext_resource type="Resource" uid="uid://bqogdmey5lkop" path="res://assets/resources/level_data_0.tres" id="2_b5spy"]
 [ext_resource type="Script" uid="uid://k13rfv5ilnri" path="res://scripts/ReactionSystem.gd" id="2_kk2rg"]
 [ext_resource type="Script" uid="uid://cfqfkj0gr7us7" path="res://scripts/reagent_shelf.gd" id="3_mj2jn"]
 [ext_resource type="Texture2D" uid="uid://cur5o1xjngjfw" path="res://assets/sprites/MixingKolbaPlaceholder.png" id="3_v1wow"]
@@ -11,22 +10,58 @@
 [ext_resource type="FontFile" uid="uid://dpuydgwylexvh" path="res://assets/fonts/EraserRegular.ttf" id="9_mw25s"]
 [ext_resource type="Script" uid="uid://c3oya1a4ups1u" path="res://scripts/goal_board.gd" id="9_utbpp"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mixcd"]
-texture = ExtResource("3_v1wow")
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mw25s"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_utbpp"]
+size = Vector2(168, 199)
 
 [node name="GameScene" type="Node2D"]
 script = ExtResource("1_mixcd")
-current_level = ExtResource("2_b5spy")
 
 [node name="ReactionSystem" type="Node2D" parent="."]
 script = ExtResource("2_kk2rg")
 
 [node name="Background" type="Sprite2D" parent="."]
-position = Vector2(576, 324)
-scale = Vector2(3.6000004, 3.6)
+position = Vector2(960, 540)
+scale = Vector2(3.9999998, 4)
 texture = ExtResource("1_mlf6e")
+
+[node name="ReagentShelf" type="Node2D" parent="."]
+position = Vector2(1059, 103)
+script = ExtResource("3_mj2jn")
+reagent_scene = ExtResource("4_kdryc")
+
+[node name="GoalBoard" type="Node2D" parent="."]
+position = Vector2(155, 160)
+script = ExtResource("9_utbpp")
+
+[node name="GoalText" type="RichTextLabel" parent="GoalBoard"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 31.0
+offset_top = 18.0
+offset_right = 682.0
+offset_bottom = 356.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("9_mw25s")
+
+[node name="MixerFlask" type="Area2D" parent="."]
+position = Vector2(494, 732)
+script = ExtResource("5_kdryc")
+
+[node name="ContentsLabel" type="Label" parent="MixerFlask"]
+offset_left = 92.0
+offset_top = -1.0
+offset_right = 391.0
+offset_bottom = 85.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MixerFlask"]
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_utbpp")
+
+[node name="Sprite2D" type="Sprite2D" parent="MixerFlask"]
+scale = Vector2(6, 6)
+texture = ExtResource("3_v1wow")
 
 [node name="UI" type="CanvasLayer" parent="."]
 
@@ -36,45 +71,3 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 metadata/_edit_use_anchors_ = true
-
-[node name="ReagentShelf" type="Control" parent="UI/LabUI"]
-anchors_preset = 0
-offset_left = 706.0
-offset_top = 52.0
-offset_right = 1147.0
-offset_bottom = 401.0
-script = ExtResource("3_mj2jn")
-reagent_scene = ExtResource("4_kdryc")
-
-[node name="MixerFlask" type="Panel" parent="UI/LabUI"]
-layout_mode = 0
-offset_left = 76.0
-offset_top = 384.0
-offset_right = 275.0
-offset_bottom = 598.0
-theme_override_styles/panel = SubResource("StyleBoxTexture_mixcd")
-script = ExtResource("5_kdryc")
-
-[node name="ContentsLabel" type="Label" parent="UI/LabUI/MixerFlask"]
-layout_mode = 0
-offset_left = 200.0
-offset_top = 91.0
-offset_right = 499.0
-offset_bottom = 177.0
-
-[node name="GoalBoard" type="Panel" parent="UI"]
-offset_left = 76.0
-offset_top = 79.0
-offset_right = 570.0
-offset_bottom = 342.0
-theme_override_styles/panel = SubResource("StyleBoxEmpty_mw25s")
-script = ExtResource("9_utbpp")
-
-[node name="GoalText" type="RichTextLabel" parent="UI/GoalBoard"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/normal_font = ExtResource("9_mw25s")

@@ -1,4 +1,4 @@
-extends Panel
+extends Node2D
 
 @onready var goal_text: RichTextLabel = $GoalText
 
