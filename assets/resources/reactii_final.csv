@@ -1,4 +1,4 @@
-﻿;H2;O2;N2;Cl2;C;Na;S;Ca;H2O;NaOH;HCl;CO2;SO2;H2CO3;H2SO3;Ca(OH)2;CaO;NH3;NO;NO2;HNO3;H2S;Na2O
+;H2;O2;N2;Cl2;C;Na;S;Ca;H2O;NaOH;HCl;CO2;SO2;H2CO3;H2SO3;Ca(OH)2;CaO;NH3;NO;NO2;HNO3;H2S;Na2O
 H2;-;;;;;;;;;;;;;;;;;;;;;;
 O2;p:H2O;-;;;;;;;;;;;;;;;;;;;;;
 N2;p:NH3;p:NO;-;;;;;;;;;;;;;;;;;;;;
@@ -11,7 +11,7 @@ H2O;-;-;-;-;-;p:NaOH+H2;-;p:Ca(OH)2+H2;-;;;;;;;;;;;;;;
 NaOH;-;-;-;-;-;-;-;-;-;-;;;;;;;;;;;;;
 HCl;-;-;-;-;-;p:NaCl+H2;-;b:CaCl2+H2;-;b:NaCl+H2O;-;;;;;;;;;;;;
 CO2;-;-;-;-;b:CO;-;-;-;p:H2CO3;-;-;-;;;;;;;;;;;
-SO2;p:H2S+H2O;b:SO3;-;-;p:CO2+S;-;-;-;p:H2SO3;-;-;-;-;;;;;;;;;;
+SO2;p:H2S+H2O;p:SO3;-;-;p:CO2+S;-;-;-;p:H2SO3;-;-;-;-;;;;;;;;;;
 H2CO3;-;-;-;-;-;-;-;-;-;-;-;-;-;-;;;;;;;;;
 H2SO3;-;-;-;-;-;b:NaSO3+H2;-;b:CaSO3+H2;-;-;-;-;-;-;-;;;;;;;;
 Ca(OH)2;-;-;-;-;-;-;-;-;-;-;b:CaCl2+H2O;b:CaCO3+H2O;b:CaSO3+H2O;b:CaCO3+H2O;b:CaSO3+H2O;-;;;;;;;

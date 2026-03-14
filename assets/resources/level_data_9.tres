@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="LevelData" load_steps=2 format=3 uid="uid://dlcac4fcysgqs"]
+
+[ext_resource type="Script" uid="uid://bjvq7ucmegius" path="res://scripts/level_data.gd" id="1_4nifm"]
+
+[resource]
+script = ExtResource("1_4nifm")
+goal_text = "Goal:
+
+Learn as much as possible"
+reagents = Array[String](["hydrogen", "oxygen", "nitrogen", "chlorine", "carbon", "sodium", "sulfur", "calcium", "water", "sodium_hydroxide", "hydrochloric_acid", "carbon_dioxide", "sulfur_dioxide", "carbonic_acid", "sulfurous_acid", "calcium_hydroxide", "calcium_oxide", "ammonia", "nitric_oxide", "hydrogen_sulfide", "sodium_oxide", "nitrogen_dioxide", "nitric_acid"])

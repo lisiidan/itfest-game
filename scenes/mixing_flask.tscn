@@ -14,3 +14,9 @@ texture = ExtResource("1_dgxpa")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
 shape = SubResource("RectangleShape2D_57pj2")
+
+[node name="FeedbackLabel" type="Label" parent="."]
+offset_left = 15.25
+offset_top = -15.375
+offset_right = 68.375
+offset_bottom = 13.875

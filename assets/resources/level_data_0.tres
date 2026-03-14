@@ -8,5 +8,8 @@ goal_text = "Task 1:
 I want to drink, produce some water
 
 Task 2:
-Make the gas we exhale"
+Make the gas we exhale
+
+Task 3:
+Create the gas that smell like rotten egg"
 reagents = Array[String](["hydrogen", "oxygen", "nitrogen", "chlorine", "carbon", "sodium", "sulfur", "calcium"])

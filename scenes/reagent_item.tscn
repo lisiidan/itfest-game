@@ -11,9 +11,9 @@ script = ExtResource("1_ytrfq")
 
 [node name="Label" type="Label" parent="."]
 offset_left = 27.0
-offset_top = 83.0
+offset_top = 87.0
 offset_right = 67.0
-offset_bottom = 106.0
+offset_bottom = 110.0
 text = "TEXT"
 horizontal_alignment = 1
 

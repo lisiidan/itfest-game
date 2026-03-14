@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://c3mffqf2yya50"]
+
+[ext_resource type="Texture2D" uid="uid://ygs6q6fccjb" path="res://assets/sprites/cat_wake.png" id="1_myi5k"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_se5fe"]
+atlas = ExtResource("1_myi5k")
+region = Rect2(0, 0, 341, 380)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t8pth"]
+atlas = ExtResource("1_myi5k")
+region = Rect2(341, 0, 341, 380)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7vi38"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_se5fe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t8pth")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[node name="Cat" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_7vi38")
+frame_progress = 0.15845896

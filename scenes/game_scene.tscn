@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bv67if74gx2px"]
+[gd_scene load_steps=13 format=3 uid="uid://bv67if74gx2px"]
 
 [ext_resource type="Script" uid="uid://cqhgggoc6cthm" path="res://scripts/game_scene.gd" id="1_mixcd"]
 [ext_resource type="Texture2D" uid="uid://c1m2wbfgqcxc1" path="res://assets/sprites/GameScenePlaceholder.png" id="1_mlf6e"]
@@ -9,6 +9,8 @@
 [ext_resource type="Script" uid="uid://cbjygos1gwhuo" path="res://scripts/mixer_flask.gd" id="5_kdryc"]
 [ext_resource type="FontFile" uid="uid://dpuydgwylexvh" path="res://assets/fonts/EraserRegular.ttf" id="9_mw25s"]
 [ext_resource type="Script" uid="uid://c3oya1a4ups1u" path="res://scripts/goal_board.gd" id="9_utbpp"]
+[ext_resource type="Texture2D" uid="uid://drajyubjms2jc" path="res://assets/sprites/flask_full.png" id="10_tcjrq"]
+[ext_resource type="Texture2D" uid="uid://dkh1u6o23if24" path="res://assets/sprites/flask_half.png" id="11_rvs2r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_utbpp"]
 size = Vector2(168, 199)
@@ -37,17 +39,23 @@ script = ExtResource("9_utbpp")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 31.0
-offset_top = 18.0
-offset_right = 682.0
-offset_bottom = 356.0
+offset_left = -5.0
+offset_top = 27.0
+offset_right = 696.0
+offset_bottom = 422.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/normal_font = ExtResource("9_mw25s")
+theme_override_font_sizes/normal_font_size = 32
 
 [node name="MixerFlask" type="Area2D" parent="."]
-position = Vector2(494, 732)
+position = Vector2(886, 811)
+scale = Vector2(1.5, 1.5)
 script = ExtResource("5_kdryc")
+
+[node name="FlaskSprite" type="Sprite2D" parent="MixerFlask"]
+scale = Vector2(6, 6)
+texture = ExtResource("3_v1wow")
 
 [node name="ContentsLabel" type="Label" parent="MixerFlask"]
 offset_left = 92.0
@@ -56,12 +64,21 @@ offset_right = 391.0
 offset_bottom = 85.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MixerFlask"]
+visible = false
 position = Vector2(0, 1.5)
 shape = SubResource("RectangleShape2D_utbpp")
 
-[node name="Sprite2D" type="Sprite2D" parent="MixerFlask"]
+[node name="LiquidFull" type="Sprite2D" parent="MixerFlask"]
 scale = Vector2(6, 6)
-texture = ExtResource("3_v1wow")
+texture = ExtResource("10_tcjrq")
+
+[node name="FeedbackTimer" type="Timer" parent="MixerFlask"]
+wait_time = 2.0
+one_shot = true
+
+[node name="LiquidHalf" type="Sprite2D" parent="MixerFlask"]
+scale = Vector2(6, 6)
+texture = ExtResource("11_rvs2r")
 
 [node name="UI" type="CanvasLayer" parent="."]
 
@@ -71,3 +88,13 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 metadata/_edit_use_anchors_ = true
+
+[node name="FeedbackLabel" type="Label" parent="UI/LabUI"]
+layout_mode = 0
+offset_left = 1453.0
+offset_top = 855.0
+offset_right = 1865.0
+offset_bottom = 998.0
+
+[connection signal="input_event" from="MixerFlask" to="MixerFlask" method="_on_input_event"]
+[connection signal="timeout" from="MixerFlask/FeedbackTimer" to="MixerFlask" method="_on_feedback_timer_timeout"]

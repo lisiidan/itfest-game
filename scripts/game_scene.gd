@@ -3,7 +3,7 @@ extends Node2D
 @onready var goal_board: Node2D = $GoalBoard
 @onready var reagent_shelf: Node2D = $ReagentShelf
 
-var level_index := 1
+var level_index := 9
 var current_level: LevelData
 
 func _ready():

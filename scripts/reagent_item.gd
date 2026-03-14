@@ -82,6 +82,8 @@ func get_formula(name: String) -> String:
 		"sodium_sulfite": "NaSO3",
 		"ammonia": "NH3",
 		"nitric_oxide": "NO",
+		"hydrogen_sulfide": "H2S",
+		"sodium_oxide": "Na2O",
 		"nitrogen_dioxide": "NO2",
 		"nitric_acid": "HNO3"
 	}
