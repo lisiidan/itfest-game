@@ -43,6 +43,12 @@ var basic_reagents: Array[String] = [
 	"sulfur", "calcium"
 ]
 
+func clear_shelf():
+	spawned_reagents.clear()
+
+	for child in get_children():
+		child.queue_free()
+
 func spawn_reagents(reagents: Array):
 	for r in reagents:
 		add_reagent_to_shelf(r)

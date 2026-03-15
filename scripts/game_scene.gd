@@ -4,7 +4,7 @@ extends Node2D
 @onready var reagent_shelf: Node2D = $ReagentShelf
 @onready var level_complete_menu: Control = $UI/LevelCompleteMenu
 
-var level_index := 3
+var level_index := 0
 var current_level: LevelData
 var max_level_count := 3
 var level_finished := false
@@ -56,8 +56,7 @@ func load_level(index: int):
 	goal_board.setup_goals(current_level.goals, current_level.goal_results)
 
 func clear_level_state():
-	# тут позже можно чистить flask / particles / discovered temp state
-	pass
+	reagent_shelf.clear_shelf()
 
 func _on_all_goals_completed():
 	if level_finished:
@@ -68,8 +67,8 @@ func _on_all_goals_completed():
 
 func go_to_next_level():
 	level_index += 1
-	if(level_index > max_level_count):
-		level_index = 0
+	#if(level_index > max_level_count):
+		#level_index = 0
 	load_level(level_index)
 
 func restart_level():
