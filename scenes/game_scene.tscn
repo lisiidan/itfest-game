@@ -1,10 +1,10 @@
-[gd_scene load_steps=35 format=3 uid="uid://bv67if74gx2px"]
+[gd_scene load_steps=65 format=3 uid="uid://bv67if74gx2px"]
 
 [ext_resource type="Script" uid="uid://cqhgggoc6cthm" path="res://scripts/game_scene.gd" id="1_mixcd"]
-[ext_resource type="Texture2D" uid="uid://c1m2wbfgqcxc1" path="res://assets/sprites/GameScenePlaceholder.png" id="1_mlf6e"]
 [ext_resource type="Script" uid="uid://k13rfv5ilnri" path="res://scripts/ReactionSystem.gd" id="2_kk2rg"]
 [ext_resource type="Script" uid="uid://cfqfkj0gr7us7" path="res://scripts/reagent_shelf.gd" id="3_mj2jn"]
 [ext_resource type="Texture2D" uid="uid://cur5o1xjngjfw" path="res://assets/sprites/MixingKolbaPlaceholder.png" id="3_v1wow"]
+[ext_resource type="Texture2D" uid="uid://vwqxvcmuwkgc" path="res://assets/sprites/new_background.png" id="3_y1k1x"]
 [ext_resource type="PackedScene" uid="uid://bjuduo12raoq2" path="res://scenes/reagent_item.tscn" id="4_kdryc"]
 [ext_resource type="Script" uid="uid://cbjygos1gwhuo" path="res://scripts/mixer_flask.gd" id="5_kdryc"]
 [ext_resource type="FontFile" uid="uid://dpuydgwylexvh" path="res://assets/fonts/EraserRegular.ttf" id="9_mw25s"]
@@ -28,8 +28,38 @@
 [ext_resource type="Resource" uid="uid://b0j0clb31qfie" path="res://assets/resources/jounal_entries/H2O.tres" id="23_ttvoq"]
 [ext_resource type="Resource" uid="uid://ls8kwu1avqt8" path="res://assets/resources/jounal_entries/H2S.tres" id="24_rw4oa"]
 [ext_resource type="Texture2D" uid="uid://wdp7ocfqk070" path="res://assets/sprites/feedback_bubble.png" id="25_r47aq"]
+[ext_resource type="Resource" path="res://assets/resources/jounal_entries/CO.tres" id="25_y1k1x"]
+[ext_resource type="Resource" path="res://assets/resources/jounal_entries/NO.tres" id="26_8k5xn"]
 [ext_resource type="PackedScene" uid="uid://dq466355lfg3i" path="res://scenes/reagent_tooltip.tscn" id="27_gqftm"]
+[ext_resource type="Resource" path="res://assets/resources/jounal_entries/CH4.tres" id="27_nqvol"]
+[ext_resource type="Resource" uid="uid://dlggdc7ckg5le" path="res://assets/resources/jounal_entries/CO2.tres" id="28_hn37p"]
 [ext_resource type="PackedScene" uid="uid://c3mffqf2yya50" path="res://scenes/cat.tscn" id="29_6irsn"]
+[ext_resource type="Resource" path="res://assets/resources/jounal_entries/CS2.tres" id="29_v0850"]
+[ext_resource type="Resource" path="res://assets/resources/jounal_entries/CaO.tres" id="30_rsf47"]
+[ext_resource type="Resource" path="res://assets/resources/jounal_entries/CaS.tres" id="31_740e7"]
+[ext_resource type="Resource" path="res://assets/resources/jounal_entries/HCl.tres" id="32_5m135"]
+[ext_resource type="Resource" path="res://assets/resources/jounal_entries/NH3.tres" id="33_if0ju"]
+[ext_resource type="Resource" path="res://assets/resources/jounal_entries/NO2.tres" id="34_gyxn8"]
+[ext_resource type="Resource" path="res://assets/resources/jounal_entries/SO2.tres" id="35_2cdvp"]
+[ext_resource type="Resource" path="res://assets/resources/jounal_entries/HNO3.tres" id="36_4off6"]
+[ext_resource type="Resource" path="res://assets/resources/jounal_entries/Na2O.tres" id="37_gj43v"]
+[ext_resource type="Resource" path="res://assets/resources/jounal_entries/NaCl.tres" id="38_wxif3"]
+[ext_resource type="Resource" path="res://assets/resources/jounal_entries/NaOH.tres" id="39_sapxr"]
+[ext_resource type="Resource" path="res://assets/resources/jounal_entries/Ca3N2.tres" id="40_7r4dc"]
+[ext_resource type="Resource" path="res://assets/resources/jounal_entries/CaCO3.tres" id="41_8c2a1"]
+[ext_resource type="Resource" path="res://assets/resources/jounal_entries/CaCl2.tres" id="42_woxj3"]
+[ext_resource type="Resource" path="res://assets/resources/jounal_entries/CaSO3.tres" id="43_3xjkh"]
+[ext_resource type="Resource" path="res://assets/resources/jounal_entries/H2CO3.tres" id="44_5m5uq"]
+[ext_resource type="Resource" path="res://assets/resources/jounal_entries/H2SO3.tres" id="45_gbf6e"]
+[ext_resource type="Resource" path="res://assets/resources/jounal_entries/NH4Cl.tres" id="46_rvsbc"]
+[ext_resource type="Resource" path="res://assets/resources/jounal_entries/NH4OH.tres" id="47_4o83c"]
+[ext_resource type="Resource" path="res://assets/resources/jounal_entries/NaNO3.tres" id="48_6gsaj"]
+[ext_resource type="Resource" path="res://assets/resources/jounal_entries/NH4NO3.tres" id="49_efcol"]
+[ext_resource type="Resource" path="res://assets/resources/jounal_entries/Na2CO3.tres" id="50_n418x"]
+[ext_resource type="Resource" path="res://assets/resources/jounal_entries/Na2SO3.tres" id="51_c1tdy"]
+[ext_resource type="Resource" path="res://assets/resources/jounal_entries/Ca(OH)2.tres" id="52_u8igr"]
+[ext_resource type="Resource" path="res://assets/resources/jounal_entries/Ca(NO3)2.tres" id="53_5taiq"]
+[ext_resource type="Resource" path="res://assets/resources/jounal_entries/Na2S.tres" id="54_qxdil"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_utbpp"]
 size = Vector2(168, 199)
@@ -64,7 +94,7 @@ script = ExtResource("2_kk2rg")
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(960, 540)
 scale = Vector2(3.9999998, 4)
-texture = ExtResource("1_mlf6e")
+texture = ExtResource("3_y1k1x")
 
 [node name="ReagentShelf" type="Node2D" parent="."]
 position = Vector2(1059, 103)
@@ -141,7 +171,7 @@ visible = false
 [node name="JournalUI" parent="UI" instance=ExtResource("13_5ay1a")]
 visible = false
 notebook_path = NodePath("../../Notebook")
-entries = Array[ExtResource("14_xgstd")]([ExtResource("15_ttvoq"), ExtResource("16_rw4oa"), ExtResource("17_r47aq"), ExtResource("18_6irsn"), ExtResource("19_gqftm"), ExtResource("20_5dk4p"), ExtResource("21_bpk3j"), ExtResource("22_ngbhp"), ExtResource("23_ttvoq"), ExtResource("24_rw4oa"), null])
+entries = Array[ExtResource("14_xgstd")]([ExtResource("15_ttvoq"), ExtResource("16_rw4oa"), ExtResource("17_r47aq"), ExtResource("18_6irsn"), ExtResource("19_gqftm"), ExtResource("20_5dk4p"), ExtResource("21_bpk3j"), ExtResource("22_ngbhp"), ExtResource("23_ttvoq"), ExtResource("24_rw4oa"), ExtResource("25_y1k1x"), ExtResource("26_8k5xn"), ExtResource("27_nqvol"), ExtResource("28_hn37p"), ExtResource("29_v0850"), ExtResource("30_rsf47"), ExtResource("31_740e7"), ExtResource("32_5m135"), ExtResource("33_if0ju"), ExtResource("34_gyxn8"), ExtResource("35_2cdvp"), ExtResource("36_4off6"), ExtResource("37_gj43v"), ExtResource("38_wxif3"), ExtResource("39_sapxr"), ExtResource("40_7r4dc"), ExtResource("41_8c2a1"), ExtResource("42_woxj3"), ExtResource("43_3xjkh"), ExtResource("44_5m5uq"), ExtResource("45_gbf6e"), ExtResource("46_rvsbc"), ExtResource("47_4o83c"), ExtResource("48_6gsaj"), ExtResource("49_efcol"), ExtResource("50_n418x"), ExtResource("51_c1tdy"), ExtResource("52_u8igr"), ExtResource("53_5taiq"), ExtResource("54_qxdil")])
 
 [node name="LabUI" type="Control" parent="UI"]
 layout_mode = 3

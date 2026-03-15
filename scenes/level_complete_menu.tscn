@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://k0gw8au1efeb"]
+[gd_scene load_steps=4 format=3 uid="uid://k0gw8au1efeb"]
 
 [ext_resource type="Script" uid="uid://bml3x6xr4o1ho" path="res://scripts/level_complete_menu.gd" id="1_01sft"]
+[ext_resource type="Texture2D" uid="uid://u8wwbqs3n16y" path="res://assets/sprites/level_complete_menu.png" id="2_a3dvx"]
+[ext_resource type="FontFile" uid="uid://d08x682pryvc6" path="res://assets/fonts/ByteBounce.ttf" id="3_xqvnh"]
 
 [node name="LevelCompleteMenu" type="Control"]
 layout_mode = 3
@@ -11,16 +13,29 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_01sft")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 0.47058824)
+texture = ExtResource("2_a3dvx")
+
+[node name="TitleLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 303.0
+offset_top = 161.0
+offset_right = 1640.0
+offset_bottom = 318.0
+theme_override_fonts/font = ExtResource("3_xqvnh")
+theme_override_font_sizes/font_size = 148
+text = "Level Completed"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Panel" type="Panel" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -34,57 +49,60 @@ offset_bottom = 150.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TitleLabel" type="Label" parent="Panel"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
-
 [node name="SubtitleLabel" type="Label" parent="Panel"]
+visible = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 
-[node name="NextButton" type="Button" parent="Panel"]
+[node name="MenuButton" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -12.0
-offset_top = 30.0
-offset_right = 106.0
-offset_bottom = 84.0
+offset_left = -374.0
+offset_top = 295.0
+offset_right = 373.0
+offset_bottom = 419.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Next"
-
-[node name="RetryButton" type="Button" parent="Panel"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -14.0
-offset_top = -19.0
-offset_right = 58.0
-offset_bottom = 17.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "Retry"
-
-[node name="MenuButton" type="Button" parent="Panel"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -91.0
-offset_top = -102.0
-offset_right = 30.0
-offset_bottom = -45.0
-grow_horizontal = 2
-grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_xqvnh")
+theme_override_font_sizes/font_size = 128
 text = "Menu"
+
+[node name="NextButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -374.0
+offset_top = -116.0
+offset_right = 373.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_xqvnh")
+theme_override_font_sizes/font_size = 128
+text = "Next level"
+
+[node name="RetryButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -374.0
+offset_top = 86.0
+offset_right = 373.0
+offset_bottom = 210.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_xqvnh")
+theme_override_font_sizes/font_size = 128
+text = "Retry
+"

@@ -4,3 +4,7 @@
 
 [resource]
 script = ExtResource("1_6wkcq")
+reagents = Array[String](["hydrogen", "oxygen", "nitrogen", "chlorine", "carbon", "sodium", "sulfur", "calcium", "water", "carbon_dioxide", "hydrogen_sulfide", "hydrochloric_acid", "sodium_oxide", "sodium_hydroxide"])
+intro_text = "Hard Tasks:"
+goals = Array[String](["Make base for fertilizers", "Make quicklime", "Make slaked lime"])
+goal_results = Array[String](["NH3", "CaO", "Ca(OH)2"])

@@ -4,7 +4,5 @@
 
 [resource]
 script = ExtResource("1_4nifm")
-goal_text = "Goal:
-
-Learn as much as possible"
 reagents = Array[String](["hydrogen", "oxygen", "nitrogen", "chlorine", "carbon", "sodium", "sulfur", "calcium", "water", "sodium_hydroxide", "hydrochloric_acid", "carbon_dioxide", "sulfur_dioxide", "carbonic_acid", "sulfurous_acid", "calcium_hydroxide", "calcium_oxide", "ammonia", "nitric_oxide", "hydrogen_sulfide", "sodium_oxide", "nitrogen_dioxide", "nitric_acid"])
+intro_text = "Try to discover all bonus products!"

@@ -267,13 +267,26 @@ func resolve_reaction():
 			play_bubbles()
 			flash_liquid(result_color)
 
+			var unlocked_any := false
+			for product in products:
+				JournalManager.unlock_entry(product)
+				unlocked_any = true
+
 			if products.size() > 1:
 				show_feedback(
 					"Journal updated. Flask keeps " + active_product + " | Stored: " + ", ".join(stored_products),
 					Color(0.6, 0.8, 1.0)
 				)
+			elif unlocked_any:
+				show_feedback(
+					"New journal entry discovered: " + active_product,
+					Color(0.6, 0.8, 1.0)
+				)
 			else:
-				show_feedback("New journal entry discovered", Color(0.6, 0.8, 1.0))
+				show_feedback(
+					"Journal updated",
+					Color(0.6, 0.8, 1.0)
+				)
 
 			locked = false
 

@@ -55,7 +55,7 @@ func refresh_entries():
 		var button := Button.new()
 		button.text = entry.reagent_id if is_unlocked else "???"
 		button.alignment = HORIZONTAL_ALIGNMENT_LEFT
-		button.add_theme_font_size_override("font_size", 16)
+		button.add_theme_font_size_override("font_size", 8)
 		button.add_theme_font_override("font", journal_font)
 		button.add_theme_color_override("font_color", Color(0.23, 0.18, 0.12))
 		if is_unlocked:

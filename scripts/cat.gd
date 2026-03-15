@@ -57,3 +57,8 @@ func play_scared() -> void:
 
 func contains_point(point: Vector2) -> bool:
 	return $CollisionShape2D.shape.get_rect().has_point(to_local(point))
+
+func reset_cat() -> void:
+	is_busy = false
+	animated_sprite.modulate = Color.WHITE
+	animated_sprite.play("sleep")

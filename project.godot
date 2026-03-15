@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="itfest_game"
-run/main_scene="uid://bv67if74gx2px"
+run/main_scene="uid://biav82ohvfp"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://assets/sprites/icon.svg"
 
@@ -19,6 +19,7 @@ config/icon="res://assets/sprites/icon.svg"
 
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 JournalManager="*res://scripts/journal_manager.gd"
+GameState="*res://scripts/GameState.gd"
 
 [display]
 

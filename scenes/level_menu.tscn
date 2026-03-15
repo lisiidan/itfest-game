@@ -1,0 +1,73 @@
+[gd_scene load_steps=4 format=3 uid="uid://xg77tk8mba7s"]
+
+[ext_resource type="Script" uid="uid://clgq8kul85khe" path="res://scripts/level_menu.gd" id="1_jqwib"]
+[ext_resource type="Texture2D" uid="uid://b72uppv33pg8" path="res://assets/sprites/level_menu.png" id="1_rj3wb"]
+[ext_resource type="FontFile" uid="uid://d08x682pryvc6" path="res://assets/fonts/ByteBounce.ttf" id="2_jqwib"]
+
+[node name="LevelMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jqwib")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_rj3wb")
+
+[node name="Level1" type="Button" parent="."]
+layout_mode = 0
+offset_left = 628.0
+offset_top = 289.0
+offset_right = 1300.0
+offset_bottom = 468.0
+theme_override_fonts/font = ExtResource("2_jqwib")
+theme_override_font_sizes/font_size = 148
+text = "LEVEL 1"
+
+[node name="Level2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 628.0
+offset_top = 538.0
+offset_right = 1300.0
+offset_bottom = 717.0
+theme_override_fonts/font = ExtResource("2_jqwib")
+theme_override_font_sizes/font_size = 148
+text = "LEVEL 2"
+
+[node name="Level3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 628.0
+offset_top = 778.0
+offset_right = 1300.0
+offset_bottom = 957.0
+theme_override_fonts/font = ExtResource("2_jqwib")
+theme_override_font_sizes/font_size = 148
+text = "LEVEL 3"
+
+[node name="Back" type="Button" parent="."]
+layout_mode = 0
+offset_left = 115.0
+offset_top = 923.0
+offset_right = 347.0
+offset_bottom = 1019.0
+theme_override_fonts/font = ExtResource("2_jqwib")
+theme_override_font_sizes/font_size = 80
+text = "Back"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 639.0
+offset_top = 116.0
+offset_right = 1300.0
+offset_bottom = 204.0
+theme_override_fonts/font = ExtResource("2_jqwib")
+theme_override_font_sizes/font_size = 128
+text = "Select level:"

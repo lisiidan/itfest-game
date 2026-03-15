@@ -1,3 +1,11 @@
-[gd_resource type="Resource" format=3 uid="uid://b8cl3fmnatef"]
+[gd_resource type="Resource" script_class="LevelData" load_steps=2 format=3 uid="uid://b8cl3fmnatef"]
+
+[ext_resource type="Script" uid="uid://bjvq7ucmegius" path="res://scripts/level_data.gd" id="1_8kg87"]
 
 [resource]
+script = ExtResource("1_8kg87")
+reagents = Array[String](["hydrogen", "oxygen", "nitrogen", "chlorine", "carbon", "sodium", "sulfur", "calcium", "water", "carbon_dioxide", "hydrogen_sulfide"])
+intro_text = "Medium Tasks:
+"
+goals = Array[String](["Make the main acid from stomach", "Make a strong base"])
+goal_results = Array[String](["HCl", "NaOH"])
