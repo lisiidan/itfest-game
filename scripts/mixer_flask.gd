@@ -4,6 +4,7 @@ extends Area2D
 @onready var reaction_system: Node2D = $"../ReactionSystem"
 @onready var reagent_shelf: Node2D = $"../ReagentShelf"
 @onready var goal_board: Node2D = $"../GoalBoard"
+@onready var pour_sound: AudioStreamPlayer2D = $"../PourSound"
 
 @onready var flask_visual = $FlaskSprite
 @onready var liquid_half = $LiquidHalf
@@ -96,6 +97,8 @@ func add_reagent(id: String):
 		return
 
 	contents.append(id)
+	if pour_sound:
+		pour_sound.play()
 	print("Flask:", contents)
 
 	if contents.size() == 1:

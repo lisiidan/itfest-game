@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=3 uid="uid://bv67if74gx2px"]
+[gd_scene load_steps=66 format=3 uid="uid://bv67if74gx2px"]
 
 [ext_resource type="Script" uid="uid://cqhgggoc6cthm" path="res://scripts/game_scene.gd" id="1_mixcd"]
 [ext_resource type="Script" uid="uid://k13rfv5ilnri" path="res://scripts/ReactionSystem.gd" id="2_kk2rg"]
@@ -60,6 +60,7 @@
 [ext_resource type="Resource" path="res://assets/resources/jounal_entries/Ca(OH)2.tres" id="52_u8igr"]
 [ext_resource type="Resource" path="res://assets/resources/jounal_entries/Ca(NO3)2.tres" id="53_5taiq"]
 [ext_resource type="Resource" path="res://assets/resources/jounal_entries/Na2S.tres" id="54_qxdil"]
+[ext_resource type="AudioStream" uid="uid://bccjvwt8j7x4l" path="res://assets/pour.wav" id="61_8k5xn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_utbpp"]
 size = Vector2(168, 199)
@@ -223,6 +224,10 @@ shape = SubResource("RectangleShape2D_liy57")
 [node name="Cat" parent="." instance=ExtResource("29_6irsn")]
 position = Vector2(1670, 769)
 scale = Vector2(7, 7)
+
+[node name="PourSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("61_8k5xn")
+volume_db = -6.0
 
 [connection signal="input_event" from="MixerFlask" to="MixerFlask" method="_on_input_event"]
 [connection signal="timeout" from="MixerFlask/FeedbackTimer" to="MixerFlask" method="_on_feedback_timer_timeout"]
