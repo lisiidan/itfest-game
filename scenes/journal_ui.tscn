@@ -1,0 +1,67 @@
+[gd_scene load_steps=3 format=3 uid="uid://0nkptr6f5f4n"]
+
+[ext_resource type="Script" uid="uid://ovc576a8ao2m" path="res://scripts/journal_ui.gd" id="1_8qnux"]
+[ext_resource type="Texture2D" uid="uid://e0eil4pbemko" path="res://assets/sprites/notebook_maxi.png" id="2_8qnux"]
+
+[node name="JournalUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8qnux")
+
+[node name="Dim" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.3137255)
+
+[node name="NotebookPanel" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.063541666
+anchor_top = 0.063888885
+anchor_right = 0.7135417
+anchor_bottom = 1.025
+offset_right = -768.0
+offset_bottom = -768.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("2_8qnux")
+metadata/_edit_use_anchors_ = true
+
+[node name="EntriesList" type="GridContainer" parent="NotebookPanel"]
+layout_mode = 0
+offset_left = 17.714275
+offset_top = 9.999998
+offset_right = 17.714275
+offset_bottom = 9.999998
+columns = 5
+
+[node name="EntryPage" type="Control" parent="NotebookPanel"]
+anchors_preset = 0
+offset_left = 243.42859
+offset_top = 8.857143
+offset_right = 421.42856
+offset_bottom = 246.85713
+
+[node name="Title" type="Label" parent="NotebookPanel/EntryPage"]
+layout_mode = 0
+offset_left = 63.142838
+offset_top = 3.4285736
+offset_right = 103.14284
+offset_bottom = 26.428574
+horizontal_alignment = 1
+
+[node name="Body" type="RichTextLabel" parent="NotebookPanel/EntryPage"]
+layout_mode = 0
+offset_left = 0.8571434
+offset_top = 25.428574
+offset_right = 178.57141
+offset_bottom = 237.99998

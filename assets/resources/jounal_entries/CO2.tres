@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="JournalEntryData" load_steps=2 format=3 uid="uid://dlggdc7ckg5le"]
+
+[ext_resource type="Script" uid="uid://ymttdknt3aee" path="res://scripts/journal_entry_data.gd" id="1_ik3xl"]
+
+[resource]
+script = ExtResource("1_ik3xl")
+reagent_id = "CO2"
+title = "Carbon dyoxide"
+body = "Carbon dyoxide"

@@ -1,18 +1,18 @@
-;H2;O2;N2;Cl2;C;Na;S;Ca;H2O;NaOH;HCl;CO2;SO2;H2CO3;H2SO3;Ca(OH)2;CaO;NH3;NO;NO2;HNO3;H2S;Na2O
+﻿;H2;O2;N2;Cl2;C;Na;S;Ca;H2O;NaOH;HCl;CO2;SO2;H2CO3;H2SO3;Ca(OH)2;CaO;NH3;NO;NO2;HNO3;H2S;Na2O
 H2;-;;;;;;;;;;;;;;;;;;;;;;
 O2;p:H2O;-;;;;;;;;;;;;;;;;;;;;;
 N2;p:NH3;p:NO;-;;;;;;;;;;;;;;;;;;;;
 Cl2;p:HCl;-;-;-;;;;;;;;;;;;;;;;;;;
 C;b:CH4;p:CO2;-;-;-;;;;;;;;;;;;;;;;;;
-Na;-;p:Na2O;-;p:NaCl;-;-;;;;;;;;;;;;;;;;;
+Na;-;p:Na2O;-;b:NaCl;-;-;;;;;;;;;;;;;;;;;
 S;p:H2S;p:SO2;-;-;b:CS2;b:Na2S;-;;;;;;;;;;;;;;;;
 Ca;-;p:CaO;b:Ca3N2;b:CaCl2;-;-;b:CaS;-;;;;;;;;;;;;;;;
 H2O;-;-;-;-;-;p:NaOH+H2;-;p:Ca(OH)2+H2;-;;;;;;;;;;;;;;
 NaOH;-;-;-;-;-;-;-;-;-;-;;;;;;;;;;;;;
 HCl;-;-;-;-;-;p:NaCl+H2;-;b:CaCl2+H2;-;b:NaCl+H2O;-;;;;;;;;;;;;
-CO2;-;-;-;-;b:CO;-;-;-;p:H2CO3;-;-;-;;;;;;;;;;;
+CO2;-;-;-;-;b:CO;-;-;-;p:H2CO3;b:Na2CO3+H2O;-;-;;;;;;;;;;;
 SO2;p:H2S+H2O;p:SO3;-;-;p:CO2+S;-;-;-;p:H2SO3;-;-;-;-;;;;;;;;;;
-H2CO3;-;-;-;-;-;-;-;-;-;-;-;-;-;-;;;;;;;;;
+H2CO3;-;-;-;-;-;b:Na2CO3+H2;-;-;-;b:Na2CO3+H2O;-;-;-;-;;;;;;;;;
 H2SO3;-;-;-;-;-;b:NaSO3+H2;-;b:CaSO3+H2;-;-;-;-;-;-;-;;;;;;;;
 Ca(OH)2;-;-;-;-;-;-;-;-;-;-;b:CaCl2+H2O;b:CaCO3+H2O;b:CaSO3+H2O;b:CaCO3+H2O;b:CaSO3+H2O;-;;;;;;;
 CaO;-;-;-;-;-;-;-;-;p:Ca(OH)2;-;b:CaCl2+H2O;b:CaCO3;b:CaSO3;b:CaCO3+H2O;b:CaSO3+H2O;-;-;;;;;;
@@ -21,4 +21,5 @@ NO;p:N2+H2O;p:NO2;-;-;-;-;-;-;-;-;-;-;-;-;-;-;-;-;-;;;;
 NO2;p:N2+H2O;-;-;-;-;-;-;-;p:HNO3+NO;-;-;-;-;-;-;-;-;-;-;-;;;
 HNO3;-;-;-;-;-;-;-;-;-;b:NaNO3+H2O;-;-;-;-;-;b:Ca(NO3)2+H2O;b:Ca(NO3)2+H2O;b:NH4NO3;-;-;-;;
 H2S;-;p:SO2+H2O;-;p:S+HCl;-;b:Na2S+H2;-;b:CaS+H2;-;-;-;-;b:S+H2O;-;-;b:CaS+H2O;b:CaS+H2O;-;-;-;-;-;
-Na2O;-;-;-;-;-;-;-;-;p:2NaOH;-;b:NaCl + H2O;b:Na2CO3;b:Na2SO3;b:Na2CO3 + H2O;b:Na2SO3 + H2O;-;-;-;-;-;b:NaNO3 + H2O;b:Na2S + H2O;-
+Na2O;-;-;-;-;-;-;-;-;p:NaOH;-;b:NaCl + H2O;b:Na2CO3;b:Na2SO3;b:Na2CO3 + H2O;b:Na2SO3 + H2O;-;-;-;-;-;b:NaNO3 + H2O;b:Na2S + H2O;-
+;;;;;;;;;;;;;;;;;;;;;;;

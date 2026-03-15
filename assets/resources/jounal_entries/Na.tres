@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="JournalEntryData" load_steps=2 format=3 uid="uid://c6gi78vd3plo2"]
+
+[ext_resource type="Script" uid="uid://ymttdknt3aee" path="res://scripts/journal_entry_data.gd" id="1_8qw52"]
+
+[resource]
+script = ExtResource("1_8qw52")
+reagent_id = "Na"
+title = "Sodium"
+body = "Sodium text"

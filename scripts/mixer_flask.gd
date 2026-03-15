@@ -155,12 +155,12 @@ func resolve_reaction():
 			var discovered_any := false
 
 			for product in products:
-				goal_board.check_goal(product)
 				if not reagent_shelf.reagent_already_spawned(product):
 					discovered_any = true
 
 			if discovered_any:
-				show_feedback("New reagent discovered: " + ", ".join(products), Color(0.6, 1.0, 0.6))
+				#show_feedback("New reagent discovered: " + ", ".join(products), Color(0.6, 1.0, 0.6))
+				pass
 			else:
 				show_feedback("Already known reagent(s)", Color(1.0, 1.0, 0.0, 1.0))
 
@@ -176,10 +176,7 @@ func resolve_reaction():
 			set_bubbles_color(result_color)
 			play_bubbles()
 			flash_liquid(result_color)
-
-			for product in products:
-				goal_board.check_goal(product)
-
+			
 			show_feedback("New journal entry discovered", Color(0.6, 0.8, 1.0))
 
 		"neutral":
@@ -203,8 +200,25 @@ func flash_liquid(color: Color):
 		set_liquid_color(original_modulate)
 	)
 
+func reset_flask():
+	pending_shelf_reagents.clear()
+	contents.clear()
+	locked = false
+	last_reaction_type = "neutral"
+
+	hide_liquids()
+
+	if bubbles:
+		bubbles.emitting = false
+
+	if feedback_label:
+		feedback_label.visible = false
+
+	update_ui()
+
 func clear_flask():
 	for reagent in pending_shelf_reagents:
+		goal_board.check_goal(reagent)
 		if not reagent_shelf.reagent_already_spawned(reagent) and not reagent_shelf.is_basic_reagent(get_full_name(reagent)):
 			animate_result_to_shelf(reagent)
 
@@ -239,6 +253,8 @@ func animate_result_to_shelf(reagent: String):
 	tween.tween_callback(func():
 		sprite.queue_free()
 		reagent_shelf.add_reagent_to_shelf(reagent)
+		JournalManager.unlock_entry(reagent)
+		show_feedback("New journal entry unlocked: " + reagent, Color(0.8, 0.9, 1.0))
 	)
 
 func update_ui():

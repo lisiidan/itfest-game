@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://dpuydgwylexvh"
-path="res://.godot/imported/EraserRegular.ttf-552569ccde394812ec90385361b8732d.fontdata"
+uid="uid://bxx1rg8now3d2"
+path="res://.godot/imported/Jurnal_font.ttf-7d62561fc2e74b551edb360439dd9137.fontdata"
 
 [deps]
 
-source_file="res://assets/fonts/EraserRegular.ttf"
-dest_files=["res://.godot/imported/EraserRegular.ttf-552569ccde394812ec90385361b8732d.fontdata"]
+source_file="res://assets/fonts/Jurnal_font.ttf"
+dest_files=["res://.godot/imported/Jurnal_font.ttf-7d62561fc2e74b551edb360439dd9137.fontdata"]
 
 [params]
 
@@ -16,7 +16,7 @@ Rendering=null
 antialiasing=1
 generate_mipmaps=false
 disable_embedded_bitmaps=true
-multichannel_signed_distance_field=false
+multichannel_signed_distance_field=true
 msdf_pixel_range=4
 msdf_size=48
 allow_system_fallback=true
@@ -34,8 +34,7 @@ preload=[{
 "chars": [],
 "glyphs": [],
 "name": "New Configuration",
-"size": Vector2i(16, 0),
-&"variation_embolden": 0.0
+"size": Vector2i(16, 0)
 }]
 language_support={}
 script_support={}

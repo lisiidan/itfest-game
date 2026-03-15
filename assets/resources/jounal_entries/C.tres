@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="JournalEntryData" load_steps=2 format=3 uid="uid://dwlhjixqqo2s3"]
+
+[ext_resource type="Script" uid="uid://ymttdknt3aee" path="res://scripts/journal_entry_data.gd" id="1_j4675"]
+
+[resource]
+script = ExtResource("1_j4675")
+reagent_id = "C"
+title = "Carbon"
+body = "Carbon text"

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="JournalEntryData" load_steps=2 format=3 uid="uid://bkgdbeovv7enk"]
+
+[ext_resource type="Script" uid="uid://ymttdknt3aee" path="res://scripts/journal_entry_data.gd" id="1_gqu0q"]
+
+[resource]
+script = ExtResource("1_gqu0q")
+reagent_id = "N2"
+title = "Nitrogen"
+body = "Nitrogen text"

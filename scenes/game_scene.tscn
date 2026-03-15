@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bv67if74gx2px"]
+[gd_scene load_steps=31 format=3 uid="uid://bv67if74gx2px"]
 
 [ext_resource type="Script" uid="uid://cqhgggoc6cthm" path="res://scripts/game_scene.gd" id="1_mixcd"]
 [ext_resource type="Texture2D" uid="uid://c1m2wbfgqcxc1" path="res://assets/sprites/GameScenePlaceholder.png" id="1_mlf6e"]
@@ -12,7 +12,21 @@
 [ext_resource type="Texture2D" uid="uid://drajyubjms2jc" path="res://assets/sprites/flask_full.png" id="10_tcjrq"]
 [ext_resource type="Texture2D" uid="uid://dkh1u6o23if24" path="res://assets/sprites/flask_half.png" id="11_rvs2r"]
 [ext_resource type="Texture2D" uid="uid://df3xgalieheu6" path="res://assets/sprites/bubble.png" id="12_rvs2r"]
+[ext_resource type="PackedScene" uid="uid://0nkptr6f5f4n" path="res://scenes/journal_ui.tscn" id="13_5ay1a"]
 [ext_resource type="PackedScene" uid="uid://k0gw8au1efeb" path="res://scenes/level_complete_menu.tscn" id="13_tqxxy"]
+[ext_resource type="Script" uid="uid://ymttdknt3aee" path="res://scripts/journal_entry_data.gd" id="14_xgstd"]
+[ext_resource type="Texture2D" uid="uid://cvvcyfainuale" path="res://assets/sprites/notes.png" id="15_ldkr4"]
+[ext_resource type="Script" uid="uid://cdt5dgjubenlm" path="res://scripts/notebook.gd" id="15_liy57"]
+[ext_resource type="Resource" uid="uid://dwlhjixqqo2s3" path="res://assets/resources/jounal_entries/C.tres" id="15_ttvoq"]
+[ext_resource type="Resource" uid="uid://bnq71256heew6" path="res://assets/resources/jounal_entries/Ca.tres" id="16_rw4oa"]
+[ext_resource type="Resource" uid="uid://cbo8wbqxser5i" path="res://assets/resources/jounal_entries/Cl2.tres" id="17_r47aq"]
+[ext_resource type="Resource" uid="uid://u7sunt7a1q2r" path="res://assets/resources/jounal_entries/H2.tres" id="18_6irsn"]
+[ext_resource type="Resource" uid="uid://bkgdbeovv7enk" path="res://assets/resources/jounal_entries/N2.tres" id="19_gqftm"]
+[ext_resource type="Resource" uid="uid://c6gi78vd3plo2" path="res://assets/resources/jounal_entries/Na.tres" id="20_5dk4p"]
+[ext_resource type="Resource" uid="uid://42kgqi62dsmc" path="res://assets/resources/jounal_entries/O2.tres" id="21_bpk3j"]
+[ext_resource type="Resource" uid="uid://c5a4arkacvbx7" path="res://assets/resources/jounal_entries/S.tres" id="22_ngbhp"]
+[ext_resource type="Resource" uid="uid://b0j0clb31qfie" path="res://assets/resources/jounal_entries/H2O.tres" id="23_ttvoq"]
+[ext_resource type="Resource" uid="uid://ls8kwu1avqt8" path="res://assets/resources/jounal_entries/H2S.tres" id="24_rw4oa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_utbpp"]
 size = Vector2(168, 199)
@@ -29,6 +43,9 @@ gravity = Vector3(0, -30, 0)
 damping_max = 2.0
 scale_min = 0.29999998
 scale_max = 0.71999997
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_liy57"]
+size = Vector2(40, 47)
 
 [node name="GameScene" type="Node2D"]
 script = ExtResource("1_mixcd")
@@ -67,7 +84,7 @@ theme_override_font_sizes/normal_font_size = 32
 position = Vector2(3, 144)
 
 [node name="MixerFlask" type="Area2D" parent="."]
-position = Vector2(886, 811)
+position = Vector2(796, 808.00006)
 scale = Vector2(1.5, 1.5)
 script = ExtResource("5_kdryc")
 
@@ -110,6 +127,11 @@ process_material = SubResource("ParticleProcessMaterial_tcjrq")
 
 [node name="UI" type="CanvasLayer" parent="."]
 
+[node name="JournalUI" parent="UI" instance=ExtResource("13_5ay1a")]
+visible = false
+notebook_path = NodePath("../../Notebook")
+entries = Array[ExtResource("14_xgstd")]([ExtResource("15_ttvoq"), ExtResource("16_rw4oa"), ExtResource("17_r47aq"), ExtResource("18_6irsn"), ExtResource("19_gqftm"), ExtResource("20_5dk4p"), ExtResource("21_bpk3j"), ExtResource("22_ngbhp"), ExtResource("23_ttvoq"), ExtResource("24_rw4oa"), null])
+
 [node name="LabUI" type="Control" parent="UI"]
 layout_mode = 3
 anchors_preset = 0
@@ -119,13 +141,29 @@ metadata/_edit_use_anchors_ = true
 
 [node name="FeedbackLabel" type="Label" parent="UI/LabUI"]
 layout_mode = 0
-offset_left = 1453.0
-offset_top = 855.0
-offset_right = 1865.0
-offset_bottom = 998.0
+offset_left = 64.0
+offset_top = 841.0
+offset_right = 476.0
+offset_bottom = 984.0
 
 [node name="LevelCompleteMenu" parent="UI" instance=ExtResource("13_tqxxy")]
 visible = false
 
+[node name="Notebook" type="Area2D" parent="."]
+position = Vector2(1635, 1005)
+scale = Vector2(8.5, 8.5)
+script = ExtResource("15_liy57")
+journal_ui_path = NodePath("../UI/JournalUI")
+
+[node name="Sprite2D" type="Sprite2D" parent="Notebook"]
+texture = ExtResource("15_ldkr4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Notebook"]
+visible = false
+position = Vector2(1, 1.5)
+shape = SubResource("RectangleShape2D_liy57")
+
 [connection signal="input_event" from="MixerFlask" to="MixerFlask" method="_on_input_event"]
 [connection signal="timeout" from="MixerFlask/FeedbackTimer" to="MixerFlask" method="_on_feedback_timer_timeout"]
+[connection signal="mouse_entered" from="Notebook" to="Notebook" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Notebook" to="Notebook" method="_on_mouse_exited"]

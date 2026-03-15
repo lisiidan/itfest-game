@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="JournalEntryData" load_steps=2 format=3 uid="uid://u7sunt7a1q2r"]
+
+[ext_resource type="Script" uid="uid://ymttdknt3aee" path="res://scripts/journal_entry_data.gd" id="1_13lm6"]
+
+[resource]
+script = ExtResource("1_13lm6")
+reagent_id = "H2"
+title = "Hydrogen"
+body = "Hydrogen is the lightest element.
+
+It is highly flammable and forms water when reacting with oxygen.
+
+Chemical formula: H₂"

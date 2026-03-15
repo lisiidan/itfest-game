@@ -3,7 +3,8 @@ extends Node2D
 @onready var goal_board: Node2D = $GoalBoard
 @onready var reagent_shelf: Node2D = $ReagentShelf
 @onready var level_complete_menu: Control = $UI/LevelCompleteMenu
-
+@onready var mixer_flask: Area2D = $MixerFlask
+const LEVEL_COMPLETE_DELAY := 0.8
 var level_index := 0
 var current_level: LevelData
 var max_level_count := 3
@@ -57,12 +58,14 @@ func load_level(index: int):
 
 func clear_level_state():
 	reagent_shelf.clear_shelf()
+	mixer_flask.reset_flask()
 
 func _on_all_goals_completed():
 	if level_finished:
 		return
 
 	level_finished = true
+	await get_tree().create_timer(LEVEL_COMPLETE_DELAY).timeout
 	level_complete_menu.show_for_level_complete(level_index)
 
 func go_to_next_level():
