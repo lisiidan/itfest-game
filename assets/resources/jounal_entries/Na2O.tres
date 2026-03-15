@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="JournalEntryData" load_steps=2 format=3 uid="uid://dsqkcxyfe7o7d"]
+
+[ext_resource type="Script" uid="uid://ymttdknt3aee" path="res://scripts/journal_entry_data.gd" id="1_k5t6f"]
+
+[resource]
+script = ExtResource("1_k5t6f")
+reagent_id = "Na2O"
+title = "Sodium oxide"
+body = "[b]Basic facts[/b]
+[table=2]
+[cell]Formula:[/cell][cell]Na₂O[/cell]
+[cell]Molar mass:[/cell][cell]62 g/mol[/cell]
+[cell]State at room temperature:[/cell][cell]Solid[/cell]
+[cell]Type:[/cell][cell]Basic oxide[/cell]
+[/table]
+[b]Formation reaction[/b]
+4Na + O₂ → 2Na₂O
+[b]Important properties[/b]
+• Reacts strongly with water.
+• Forms a strong base when dissolved in water.
+• Reacts with acids to form salts.
+[b]Where sodium oxide is found[/b]
+• Formed when sodium reacts with oxygen.
+• Present in some glass and ceramic materials.
+[b]Uses[/b]
+• Used in the production of glass.
+• Important in ceramics and chemical industry.
+[b]Safety[/b]
+Reactive with water and forms a corrosive solution (NaOH).
+Can irritate skin, eyes, and lungs."

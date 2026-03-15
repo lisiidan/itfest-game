@@ -6,4 +6,27 @@
 script = ExtResource("1_q65at")
 reagent_id = "O2"
 title = "Oxygen"
-body = "Oxygen text"
+body = "[b]Basic facts[/b]
+[table=2]
+[cell]Formula:[/cell][cell]O₂[/cell]
+[cell]Element:[/cell][cell]Oxygen[/cell]
+[cell]Atomic number:[/cell][cell]8[/cell]
+[cell]Molar mass:[/cell][cell]32 g/mol[/cell]
+[cell]State at room temperature:[/cell][cell]Gas[/cell]
+[cell]Color:[/cell][cell]Colorless[/cell]
+[cell]Smell:[/cell][cell]Odorless[/cell]
+[/table]
+[b]Important properties[/b]
+• Supports combustion (helps substances burn).  
+• Necessary for respiration of most living organisms.  
+• Reacts with many elements to form oxides.
+[b]Where oxygen is found[/b]
+• About 21% of Earth’s atmosphere.  
+• In water (H₂O).  
+• In many minerals and rocks (oxides, silicates).
+[b]Uses[/b]
+• Breathing oxygen in medicine.  
+• Used in steel production.  
+• Rocket oxidizer in liquid oxygen form.
+[b]Safety[/b]
+Oxygen itself does not burn, but it makes fires burn stronger."

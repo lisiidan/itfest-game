@@ -6,5 +6,28 @@
 script = ExtResource("1_qmfwa")
 reagent_id = "H2S"
 title = "Hydrogen Sulfide"
-body = "Hydrogen Sulfide text
-"
+body = "[b]Basic facts[/b]
+[table=2]
+[cell]Formula:[/cell][cell]H₂S[/cell]
+[cell]Molar mass:[/cell][cell]34 g/mol[/cell]
+[cell]State at room temperature:[/cell][cell]Gas[/cell]
+[cell]Color:[/cell][cell]Colorless[/cell]
+[cell]Smell:[/cell][cell]Strong smell of rotten eggs[/cell]
+[/table]
+[b]Formation reactions[/b]
+H₂ + S → H₂S  
+H₂ + SO₂ → H₂S + H₂O
+[b]Important properties[/b]
+• Toxic gas.
+• Flammable and can burn in oxygen.
+• Slightly acidic when dissolved in water.
+[b]Where hydrogen sulfide is found[/b]
+• In volcanic gases and hot springs.
+• Produced by decomposition of organic matter.
+• Found in some natural gas and petroleum deposits.
+[b]Uses[/b]
+• Used in chemical laboratories.
+• Important in the production of sulfur and sulfur compounds.
+[b]Safety[/b]
+Very toxic and dangerous in high concentrations.
+Can affect the nervous system and breathing."

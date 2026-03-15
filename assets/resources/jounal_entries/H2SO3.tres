@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="JournalEntryData" load_steps=2 format=3 uid="uid://xxq8y87su17h"]
+
+[ext_resource type="Script" uid="uid://ymttdknt3aee" path="res://scripts/journal_entry_data.gd" id="1_crkwx"]
+
+[resource]
+script = ExtResource("1_crkwx")
+reagent_id = "H2SO3"
+title = "Sulfurous acid"
+body = "[b]Basic facts[/b]
+[table=2]
+[cell]Formula:[/cell][cell]H₂SO₃[/cell]
+[cell]Molar mass:[/cell][cell]82 g/mol[/cell]
+[cell]State:[/cell][cell]Liquid (solution)[/cell]
+[cell]Type:[/cell][cell]Weak acid[/cell]
+[/table]
+[b]Formation reaction[/b]
+SO₂ + H₂O → H₂SO₃
+[b]Important properties[/b]
+• Forms when sulfur dioxide dissolves in water.
+• Unstable — can decompose back into SO₂ and water.
+• Weaker than sulfuric acid (H₂SO₄).
+[b]Where it is found[/b]
+• In rainwater polluted with SO₂.
+• In some industrial chemical processes.
+[b]Uses[/b]
+• Used in chemical reactions and industry.
+• Related to sulfites, which are used as preservatives.
+[b]Safety[/b]
+Acidic and can irritate skin and eyes in concentrated solutions."

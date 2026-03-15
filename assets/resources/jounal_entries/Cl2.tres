@@ -6,4 +6,26 @@
 script = ExtResource("1_78siu")
 reagent_id = "Cl2"
 title = "Chlorine"
-body = "Chlorine text"
+body = "[b]Basic facts[/b]
+[table=2]
+[cell]Formula:[/cell][cell]Cl₂[/cell]
+[cell]Element:[/cell][cell]Chlorine[/cell]
+[cell]Atomic number:[/cell][cell]17[/cell]
+[cell]Molar mass:[/cell][cell]70.9 g/mol[/cell]
+[cell]State at room temperature:[/cell][cell]Gas[/cell]
+[cell]Color:[/cell][cell]Yellow-green[/cell]
+[cell]Smell:[/cell][cell]Strong, irritating odor[/cell]
+[/table]
+[b]Important properties[/b]
+• Strong oxidizing agent.
+• Toxic gas that can irritate the eyes and lungs.
+[b]Where chlorine is found[/b]
+• In salt (NaCl).
+• In seawater.
+• In many chloride minerals.
+[b]Uses[/b]
+• Disinfection of water (pools, drinking water).
+• Production of PVC plastic.
+• Used to make bleaches and cleaning products.
+[b]Safety[/b]
+Chlorine gas is poisonous and must be handled carefully."

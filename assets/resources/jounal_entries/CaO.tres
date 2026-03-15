@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="JournalEntryData" load_steps=2 format=3 uid="uid://do8t2sqj6t3pw"]
+
+[ext_resource type="Script" uid="uid://ymttdknt3aee" path="res://scripts/journal_entry_data.gd" id="1_w3v8d"]
+
+[resource]
+script = ExtResource("1_w3v8d")
+reagent_id = "CaO"
+title = "Calcium oxide"
+body = "[b]Basic facts[/b]
+[table=2]
+[cell]Formula:[/cell][cell]CaO[/cell]
+[cell]Common name:[/cell][cell]Quicklime[/cell]
+[cell]Molar mass:[/cell][cell]56 g/mol[/cell]
+[cell]State at room temperature:[/cell][cell]Solid[/cell]
+[/table]
+[b]Formation reaction[/b]
+2Ca + O₂ → 2CaO
+[b]Important properties[/b]
+• Basic oxide.
+• Reacts strongly with water, producing calcium hydroxide.
+• Reaction with water releases heat.
+[b]Uses[/b]
+• Production of cement and mortar.
+• Used in steel production.
+• Water treatment and soil improvement in agriculture.
+[b]Safety[/b]
+Corrosive and reacts with water, which can cause burns.
+Dust can irritate the eyes and lungs."

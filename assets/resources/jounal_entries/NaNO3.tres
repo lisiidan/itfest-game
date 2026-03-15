@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="JournalEntryData" load_steps=2 format=3 uid="uid://c368e5vgwrvtv"]
+
+[ext_resource type="Script" uid="uid://ymttdknt3aee" path="res://scripts/journal_entry_data.gd" id="1_qhpov"]
+
+[resource]
+script = ExtResource("1_qhpov")
+reagent_id = "NaNO3"
+title = "Sodium nitrate"
+body = "[b]Basic facts[/b]
+[table=2]
+[cell]Formula:[/cell][cell]NaNO₃[/cell]
+[cell]Molar mass:[/cell][cell]85 g/mol[/cell]
+[cell]State at room temperature:[/cell][cell]White solid[/cell]
+[/table]
+[b]Formation reactions[/b]
+NaOH + HNO₃ → NaNO₃ + H₂O  
+Na₂O + 2HNO₃ → 2NaNO₃ + H₂O
+[b]Important properties[/b]
+• Ionic compound made of sodium and nitrate ions.  
+• Highly soluble in water.  
+• Oxidizing compound that can help substances burn.
+[b]Where sodium nitrate is found[/b]
+• In natural deposits such as Chile saltpeter.  
+• Produced in chemical industry.
+[b]Uses[/b]
+• Fertilizers.  
+• Used in food preservation.  
+• Used in explosives and pyrotechnics.
+[b]Safety[/b]
+Can irritate skin and eyes.  
+Large amounts may be harmful if swallowed."

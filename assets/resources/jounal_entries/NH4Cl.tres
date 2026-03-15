@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="JournalEntryData" load_steps=2 format=3 uid="uid://d3tdqnxw22dbx"]
+
+[ext_resource type="Script" uid="uid://ymttdknt3aee" path="res://scripts/journal_entry_data.gd" id="1_k01ns"]
+
+[resource]
+script = ExtResource("1_k01ns")
+reagent_id = "NH4Cl"
+title = "Ammonium chloride"
+body = "[b]Basic facts[/b]
+[table=2]
+[cell]Formula:[/cell][cell]NH₄Cl[/cell]
+[cell]Molar mass:[/cell][cell]53.5 g/mol[/cell]
+[cell]State at room temperature:[/cell][cell]White solid[/cell]
+[/table]
+[b]Formation reaction[/b]
+NH₃ + HCl → NH₄Cl
+[b]Important properties[/b]
+• Ionic compound made of ammonium (NH₄⁺) and chloride (Cl⁻) ions.
+• Soluble in water.
+• Slightly acidic in solution.
+[b]Where ammonium chloride is found[/b]
+• Produced in chemical reactions between ammonia and hydrochloric acid.
+• Found in some natural mineral deposits.
+[b]Uses[/b]
+• Fertilizers.
+• Used in batteries.
+• Used in medicine and food industry.
+[b]Safety[/b]
+Can irritate skin, eyes, and respiratory system if inhaled as dust."

@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="JournalEntryData" load_steps=2 format=3 uid="uid://ik8yt682c3rt"]
+
+[ext_resource type="Script" uid="uid://ymttdknt3aee" path="res://scripts/journal_entry_data.gd" id="1_gplvp"]
+
+[resource]
+script = ExtResource("1_gplvp")
+reagent_id = "Ca(NO3)2"
+title = "Calcium nitrate"
+body = "[b]Basic facts[/b]
+[table=2]
+[cell]Formula:[/cell][cell]Ca(NO₃)₂[/cell]
+[cell]Molar mass:[/cell][cell]164 g/mol[/cell]
+[cell]State at room temperature:[/cell][cell]White solid[/cell]
+[/table]
+[b]Formation reaction[/b]
+Ca(OH)₂ + 2HNO₃ → Ca(NO₃)₂ + 2H₂O
+[b]Important properties[/b]
+• Ionic compound made of calcium and nitrate ions.  
+• Highly soluble in water.  
+• Acts as an oxidizing compound.
+[b]Where calcium nitrate is found[/b]
+• Produced in the chemical industry.  
+• Used mainly in agriculture.
+[b]Uses[/b]
+• Fertilizers for plants.  
+• Used in wastewater treatment.  
+• Used in construction materials.
+[b]Safety[/b]
+Can irritate skin and eyes.  
+Should be handled carefully in concentrated form."

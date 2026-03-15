@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="JournalEntryData" load_steps=2 format=3 uid="uid://hdweq4tv1l2s"]
+
+[ext_resource type="Script" uid="uid://ymttdknt3aee" path="res://scripts/journal_entry_data.gd" id="1_kl67f"]
+
+[resource]
+script = ExtResource("1_kl67f")
+reagent_id = "CaS2"
+title = "Carbon disulfide"
+body = "[b]Basic facts[/b]
+[table=2]
+[cell]Formula:[/cell][cell]CS₂[/cell]
+[cell]Molar mass:[/cell][cell]76 g/mol[/cell]
+[cell]State at room temperature:[/cell][cell]Liquid[/cell]
+[cell]Color:[/cell][cell]Colorless[/cell]
+[cell]Smell:[/cell][cell]Sweet or unpleasant odor[/cell]
+[/table]
+[b]Formation reaction[/b]
+C + 2S → CS₂
+[b]Important properties[/b]
+• Highly flammable liquid.
+• Evaporates easily (volatile).
+• Does not dissolve well in water but dissolves many organic substances.
+[b]Where it is found[/b]
+• Produced industrially from carbon and sulfur at high temperature.
+[b]Uses[/b]
+• Used as a solvent in industry.
+• Used in some chemical manufacturing processes.
+[b]Safety[/b]
+Toxic and highly flammable.
+Vapors can affect the nervous system and should not be inhaled."

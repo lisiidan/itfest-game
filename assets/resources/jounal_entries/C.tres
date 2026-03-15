@@ -6,4 +6,25 @@
 script = ExtResource("1_j4675")
 reagent_id = "C"
 title = "Carbon"
-body = "Carbon text"
+body = "[b]Basic facts[/b]
+[table=2]
+[cell]Symbol:[/cell][cell]C[/cell]
+[cell]Element:[/cell][cell]Carbon[/cell]
+[cell]Atomic number:[/cell][cell]6[/cell]
+[cell]Molar mass:[/cell][cell]12 g/mol[/cell]
+[cell]State at room temperature:[/cell][cell]Solid[/cell]
+[/table]
+[b]Important properties[/b]
+• A non-metal element.
+• The basis of organic chemistry and life on Earth.
+• Exists in different forms called allotropes (for example diamond and graphite).
+[b]Where carbon is found[/b]
+• In living organisms.
+• In coal, oil, and natural gas.
+• In the atmosphere as carbon dioxide (CO₂).
+[b]Uses[/b]
+• Graphite is used in pencils and electrodes.
+• Diamond is used in jewelry and cutting tools.
+• Important for making fuels, plastics, and many chemicals.
+[b]Safety[/b]
+Carbon itself is generally safe, but some carbon compounds (like carbon monoxide, CO) are very toxic."

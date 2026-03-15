@@ -114,10 +114,20 @@ func split_products(result: String) -> Array[String]:
 
 	return products
 
-func get_display_product(products: Array[String]) -> String:
+func get_active_product(products: Array[String]) -> String:
 	if products.is_empty():
 		return ""
 	return products[0]
+
+func get_stored_products(products: Array[String]) -> Array[String]:
+	if products.size() <= 1:
+		return []
+
+	var stored: Array[String] = []
+	for i in range(1, products.size()):
+		stored.append(products[i])
+
+	return stored
 
 func set_bubbles_color(color: Color):
 	bubbles.modulate = color
@@ -141,53 +151,72 @@ func resolve_reaction():
 	match reaction["type"]:
 		"positive":
 			var products = split_products(reaction["result"])
-			pending_shelf_reagents = products
+			pending_shelf_reagents = products.duplicate()
 
-			var display_product = get_display_product(products)
-			var result_color = get_reagent_color(display_product)
+			var active_product = get_active_product(products)
+			var stored_products = get_stored_products(products)
+			var result_color = get_reagent_color(active_product)
 
-			contents = [display_product]
-			show_single_reagent(display_product, true)
+			contents = [active_product]
+			show_single_reagent(active_product, true)
 			set_bubbles_color(result_color)
 			play_bubbles()
 			flash_liquid(result_color)
 
 			var discovered_any := false
-
 			for product in products:
 				if not reagent_shelf.reagent_already_spawned(product):
 					discovered_any = true
 
-			if discovered_any:
-				#show_feedback("New reagent discovered: " + ", ".join(products), Color(0.6, 1.0, 0.6))
-				pass
+			if products.size() > 1:
+				show_feedback(
+					"Flask keeps " + active_product + " | Stored: " + ", ".join(stored_products),
+					Color(0.344, 0.169, 0.078, 1.0)
+				)
+			elif discovered_any:
+				show_feedback(
+					"New reagent discovered: " + active_product,
+					Color(0.344, 0.169, 0.078, 1.0)
+				)
 			else:
 				show_feedback("Already known reagent(s)", Color(1.0, 1.0, 0.0, 1.0))
+
+			locked = false
 
 		"bonus":
 			var products = split_products(reaction["result"])
 			pending_shelf_reagents = []
 
-			var display_product = get_display_product(products)
-			var result_color = get_reagent_color(display_product)
+			var active_product = get_active_product(products)
+			var stored_products = get_stored_products(products)
+			var result_color = get_reagent_color(active_product)
 
-			contents = [display_product]
-			show_single_reagent(display_product, true)
+			contents = [active_product]
+			show_single_reagent(active_product, true)
 			set_bubbles_color(result_color)
 			play_bubbles()
 			flash_liquid(result_color)
-			
-			show_feedback("New journal entry discovered", Color(0.6, 0.8, 1.0))
+
+			if products.size() > 1:
+				show_feedback(
+					"Journal updated. Flask keeps " + active_product + " | Stored: " + ", ".join(stored_products),
+					Color(0.6, 0.8, 1.0)
+				)
+			else:
+				show_feedback("New journal entry discovered", Color(0.6, 0.8, 1.0))
+
+			locked = false
 
 		"neutral":
 			var mix_color = mix_colors(get_reagent_color(a), get_reagent_color(b))
-			pending_shelf_reagents = []
+			pending_shelf_reagents.clear()
 			set_liquid_color(mix_color)
 			set_bubbles_color(mix_color)
 			play_bubbles()
 			flash_liquid(mix_color)
 			set_liquid_level(2)
-			show_feedback("No observable reaction", Color(0.9, 0.9, 0.9))
+			show_feedback("No observable reaction, clear the flask", Color(0.9, 0.9, 0.9))
+			# neutral stays locked until clear_flask()
 
 func flash_liquid(color: Color):
 	var original_modulate = liquid_half.modulate
@@ -207,6 +236,7 @@ func reset_flask():
 	last_reaction_type = "neutral"
 
 	hide_liquids()
+	flask_visual.modulate = Color.WHITE
 
 	if bubbles:
 		bubbles.emitting = false
@@ -219,6 +249,7 @@ func reset_flask():
 func clear_flask():
 	for reagent in pending_shelf_reagents:
 		goal_board.check_goal(reagent)
+
 		if not reagent_shelf.reagent_already_spawned(reagent) and not reagent_shelf.is_basic_reagent(get_full_name(reagent)):
 			animate_result_to_shelf(reagent)
 
@@ -231,14 +262,26 @@ func clear_flask():
 	flask_visual.modulate = Color.WHITE
 	hide_liquids()
 
+	if bubbles:
+		bubbles.emitting = false
+
 	if feedback_label:
 		feedback_label.visible = false
 
 	update_ui()
 
 func animate_result_to_shelf(reagent: String):
+	var texture_path = "res://assets/sprites/reagentsSprites/" + get_full_name(reagent) + ".png"
+	var texture = load(texture_path)
+
+	if texture == null:
+		reagent_shelf.add_reagent_to_shelf(reagent)
+		JournalManager.unlock_entry(reagent)
+		show_feedback("New journal entry unlocked: " + reagent, Color(0.344, 0.169, 0.078, 1.0))
+		return
+
 	var sprite := Sprite2D.new()
-	sprite.texture = load("res://assets/sprites/reagentsSprites/" + get_full_name(reagent) + ".png")
+	sprite.texture = texture
 	sprite.global_position = global_position
 	sprite.scale = Vector2(6, 6)
 	sprite.centered = true
@@ -254,18 +297,19 @@ func animate_result_to_shelf(reagent: String):
 		sprite.queue_free()
 		reagent_shelf.add_reagent_to_shelf(reagent)
 		JournalManager.unlock_entry(reagent)
-		show_feedback("New journal entry unlocked: " + reagent, Color(0.8, 0.9, 1.0))
+		show_feedback("New journal entry unlocked: " + reagent, Color(0.344, 0.169, 0.078, 1.0))
 	)
 
 func update_ui():
 	contents_label.text = "\n".join(contents)
 
 func show_feedback(text: String, color: Color = Color.WHITE):
+	color = Color(0.344, 0.169, 0.078, 1.0)
 	if feedback_label == null:
 		return
 
 	feedback_label.text = text
-	feedback_label.modulate = color
+	feedback_label.add_theme_color_override("font_color", color)
 	feedback_label.visible = true
 
 func show_single_reagent(id: String, full: bool):
@@ -310,7 +354,7 @@ func hide_liquids():
 	liquid_half.visible = false
 	liquid_full.visible = false
 
-func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 	if event is InputEventMouseButton \
 	and event.button_index == MOUSE_BUTTON_LEFT \
 	and event.pressed:

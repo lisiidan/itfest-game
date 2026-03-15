@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="JournalEntryData" load_steps=2 format=3 uid="uid://dq66le3tvyh85"]
+
+[ext_resource type="Script" uid="uid://ymttdknt3aee" path="res://scripts/journal_entry_data.gd" id="1_ishui"]
+
+[resource]
+script = ExtResource("1_ishui")
+reagent_id = "CaS"
+title = "Calcium sulfide"
+body = "[b]Basic facts[/b]
+[table=2]
+[cell]Formula:[/cell][cell]CaS[/cell]
+[cell]Molar mass:[/cell][cell]72 g/mol[/cell]
+[cell]State at room temperature:[/cell][cell]Solid[/cell]
+[cell]Color:[/cell][cell]White to light gray[/cell]
+[/table]
+[b]Formation reactions[/b]
+Ca + S → CaS  
+Ca + H₂S → CaS  
+Ca(OH)₂ + H₂S → CaS + 2H₂O  
+CaO + H₂S → CaS + H₂O
+[b]Important properties[/b]
+• Ionic compound made of calcium and sulfur ions.  
+• Reacts with water and acids to produce hydrogen sulfide gas (H₂S).  
+• Sensitive to moisture in air.
+[b]Where calcium sulfide is found[/b]
+• Produced when calcium compounds react with sulfur at high temperature.
+[b]Uses[/b]
+• Used in phosphorescent materials (glow-in-the-dark paints).  
+• Used in some chemical processes.
+[b]Safety[/b]
+Can release toxic hydrogen sulfide gas when reacting with water or acids.  
+Should be handled in dry conditions."

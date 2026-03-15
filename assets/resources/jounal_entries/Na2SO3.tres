@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="JournalEntryData" load_steps=2 format=3 uid="uid://dos06jr81jw2t"]
+
+[ext_resource type="Script" uid="uid://ymttdknt3aee" path="res://scripts/journal_entry_data.gd" id="1_tp37p"]
+
+[resource]
+script = ExtResource("1_tp37p")
+reagent_id = "Na2SO3"
+title = "Sodium sulfite"
+body = "[b]Basic facts[/b]
+[table=2]
+[cell]Formula:[/cell][cell]Na₂SO₃[/cell]
+[cell]Molar mass:[/cell][cell]126 g/mol[/cell]
+[cell]State at room temperature:[/cell][cell]White solid[/cell]
+[/table]
+[b]Formation reactions[/b]
+2Na + H₂SO₃ → Na₂SO₃ + H₂  
+Na₂O + SO₂ → Na₂SO₃  
+Na₂O + H₂SO₃ → Na₂SO₃ + H₂O
+[b]Important properties[/b]
+• Ionic compound.  
+• Soluble in water.  
+• Reacts with acids to produce sulfur dioxide (SO₂).  
+• Acts as a reducing agent in many reactions.
+[b]Where sodium sulfite is found[/b]
+• Produced in chemical industry.  
+• Formed during some sulfur dioxide absorption processes.
+[b]Uses[/b]
+• Used as a food preservative.  
+• Used in paper production.  
+• Used in water treatment to remove oxygen.
+[b]Safety[/b]
+Can irritate skin and eyes.  
+Reacts with acids to release irritating SO₂ gas."

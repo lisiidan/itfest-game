@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://bv67if74gx2px"]
+[gd_scene load_steps=34 format=3 uid="uid://bv67if74gx2px"]
 
 [ext_resource type="Script" uid="uid://cqhgggoc6cthm" path="res://scripts/game_scene.gd" id="1_mixcd"]
 [ext_resource type="Texture2D" uid="uid://c1m2wbfgqcxc1" path="res://assets/sprites/GameScenePlaceholder.png" id="1_mlf6e"]
@@ -27,6 +27,8 @@
 [ext_resource type="Resource" uid="uid://c5a4arkacvbx7" path="res://assets/resources/jounal_entries/S.tres" id="22_ngbhp"]
 [ext_resource type="Resource" uid="uid://b0j0clb31qfie" path="res://assets/resources/jounal_entries/H2O.tres" id="23_ttvoq"]
 [ext_resource type="Resource" uid="uid://ls8kwu1avqt8" path="res://assets/resources/jounal_entries/H2S.tres" id="24_rw4oa"]
+[ext_resource type="Texture2D" uid="uid://wdp7ocfqk070" path="res://assets/sprites/feedback_bubble.png" id="25_r47aq"]
+[ext_resource type="PackedScene" uid="uid://c3mffqf2yya50" path="res://scenes/cat.tscn" id="29_6irsn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_utbpp"]
 size = Vector2(168, 199)
@@ -43,6 +45,11 @@ gravity = Vector3(0, -30, 0)
 damping_max = 2.0
 scale_min = 0.29999998
 scale_max = 0.71999997
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6irsn"]
+content_margin_left = 30.0
+content_margin_right = 12.0
+texture = ExtResource("25_r47aq")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_liy57"]
 size = Vector2(40, 47)
@@ -84,7 +91,7 @@ theme_override_font_sizes/normal_font_size = 32
 position = Vector2(3, 144)
 
 [node name="MixerFlask" type="Area2D" parent="."]
-position = Vector2(796, 808.00006)
+position = Vector2(709, 808.00006)
 scale = Vector2(1.5, 1.5)
 script = ExtResource("5_kdryc")
 
@@ -140,17 +147,22 @@ offset_bottom = 40.0
 metadata/_edit_use_anchors_ = true
 
 [node name="FeedbackLabel" type="Label" parent="UI/LabUI"]
+custom_minimum_size = Vector2(300, 0)
 layout_mode = 0
 offset_left = 64.0
 offset_top = 841.0
 offset_right = 476.0
 offset_bottom = 984.0
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxTexture_6irsn")
+vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="LevelCompleteMenu" parent="UI" instance=ExtResource("13_tqxxy")]
 visible = false
 
 [node name="Notebook" type="Area2D" parent="."]
-position = Vector2(1635, 1005)
+position = Vector2(1174, 1005.00006)
 scale = Vector2(8.5, 8.5)
 script = ExtResource("15_liy57")
 journal_ui_path = NodePath("../UI/JournalUI")
@@ -162,6 +174,10 @@ texture = ExtResource("15_ldkr4")
 visible = false
 position = Vector2(1, 1.5)
 shape = SubResource("RectangleShape2D_liy57")
+
+[node name="Cat" parent="." instance=ExtResource("29_6irsn")]
+position = Vector2(1670, 769)
+scale = Vector2(7, 7)
 
 [connection signal="input_event" from="MixerFlask" to="MixerFlask" method="_on_input_event"]
 [connection signal="timeout" from="MixerFlask/FeedbackTimer" to="MixerFlask" method="_on_feedback_timer_timeout"]

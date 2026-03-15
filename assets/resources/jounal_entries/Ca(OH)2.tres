@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="JournalEntryData" load_steps=2 format=3 uid="uid://c78bdsjtncgmy"]
+
+[ext_resource type="Script" uid="uid://ymttdknt3aee" path="res://scripts/journal_entry_data.gd" id="1_ouvoy"]
+
+[resource]
+script = ExtResource("1_ouvoy")
+reagent_id = "Ca(OH)2"
+title = "Calcium hydroxide"
+body = "[b]Basic facts[/b]
+[table=2]
+[cell]Formula:[/cell][cell]Ca(OH)₂[/cell]
+[cell]Molar mass:[/cell][cell]74 g/mol[/cell]
+[cell]State at room temperature:[/cell][cell]Solid[/cell]
+[cell]Type:[/cell][cell]Base (alkaline compound)[/cell]
+[/table]
+[b]Formation reaction[/b]
+CaO + H₂O → Ca(OH)₂  
+Ca + 2H₂O → Ca(OH)₂ + H₂
+[b]Important properties[/b]
+• Slightly soluble in water.  
+• Forms limewater, a basic solution.  
+• Reacts with carbon dioxide to form calcium carbonate.
+[b]Where it is found[/b]
+• Produced by adding water to calcium oxide (quicklime).  
+• Used in many industrial and construction processes.
+[b]Uses[/b]
+• Building materials (mortar, plaster).  
+• Water treatment.  
+• Used to detect CO₂ (limewater test).  
+• In agriculture to reduce soil acidity.
+[b]Safety[/b]
+Alkaline and irritating to skin and eyes in concentrated form."

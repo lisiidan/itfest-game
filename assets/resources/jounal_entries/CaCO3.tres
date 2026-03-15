@@ -1,0 +1,34 @@
+[gd_resource type="Resource" script_class="JournalEntryData" load_steps=2 format=3 uid="uid://binjx7rgja1wa"]
+
+[ext_resource type="Script" uid="uid://ymttdknt3aee" path="res://scripts/journal_entry_data.gd" id="1_t6v10"]
+
+[resource]
+script = ExtResource("1_t6v10")
+reagent_id = "CaCO3"
+title = "Calcium carbonate"
+body = "[b]Basic facts[/b]
+[table=2]
+[cell]Formula:[/cell][cell]CaCO₃[/cell]
+[cell]Molar mass:[/cell][cell]100 g/mol[/cell]
+[cell]State at room temperature:[/cell][cell]White solid[/cell]
+[/table]
+[b]Formation reactions[/b]
+Ca + H₂CO₃ → CaCO₃ + H₂  
+Ca(OH)₂ + CO₂ → CaCO₃ + H₂O  
+Ca(OH)₂ + H₂CO₃ → CaCO₃ + 2H₂O  
+CaO + H₂CO₃ → CaCO₃ + H₂O  
+CaO + CO₂ → CaCO₃
+[b]Important properties[/b]
+• Ionic compound made of calcium and carbonate ions.  
+• Slightly soluble in water.  
+• Reacts with acids to produce carbon dioxide.
+[b]Where calcium carbonate is found[/b]
+• In limestone, chalk, and marble.  
+• In shells of marine organisms.  
+• In eggshells.
+[b]Uses[/b]
+• Production of cement and lime.  
+• Used as a building material.  
+• Used in agriculture to reduce soil acidity.
+[b]Safety[/b]
+Generally safe, but dust can irritate the lungs if inhaled."

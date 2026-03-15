@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="JournalEntryData" load_steps=2 format=3 uid="uid://bi4vtku543tii"]
+
+[ext_resource type="Script" uid="uid://ymttdknt3aee" path="res://scripts/journal_entry_data.gd" id="1_7kxy8"]
+
+[resource]
+script = ExtResource("1_7kxy8")
+reagent_id = "CH4"
+title = "Methane"
+body = "[b]Basic facts[/b]
+[table=2]
+[cell]Formula:[/cell][cell]CH₄[/cell]
+[cell]Molar mass:[/cell][cell]16 g/mol[/cell]
+[cell]State at room temperature:[/cell][cell]Gas[/cell]
+[cell]Color:[/cell][cell]Colorless[/cell]
+[cell]Smell:[/cell][cell]Odorless (pure methane)[/cell]
+[/table]
+[b]Formation reaction[/b]
+C + 2H₂ → CH₄
+[b]Important properties[/b]
+• The simplest hydrocarbon.
+• Highly flammable gas.
+• Burns in oxygen to produce carbon dioxide and water.
+• Main component of natural gas.
+[b]Where methane is found[/b]
+• In natural gas deposits.
+• Produced by decomposition of organic matter in swamps and landfills.
+• Formed in the digestive system of animals.
+[b]Uses[/b]
+• Used as a fuel for heating and cooking.
+• Important energy source.
+• Used in the chemical industry to produce hydrogen and other chemicals.
+[b]Safety[/b]
+Highly flammable and can form explosive mixtures with air."

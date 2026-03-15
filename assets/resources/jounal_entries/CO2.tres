@@ -6,4 +6,30 @@
 script = ExtResource("1_ik3xl")
 reagent_id = "CO2"
 title = "Carbon dyoxide"
-body = "Carbon dyoxide"
+body = "[b]Basic facts[/b]
+[table=2]
+[cell]Formula:[/cell][cell]CO₂[/cell]
+[cell]Molar mass:[/cell][cell]44 g/mol[/cell]
+[cell]State at room temperature:[/cell][cell]Gas[/cell]
+[cell]Color:[/cell][cell]Colorless[/cell]
+[cell]Smell:[/cell][cell]Odorless[/cell]
+[cell]Density:[/cell][cell]Heavier than air[/cell]
+[/table]
+[b]Formation reaction[/b]
+C + O₂ → CO₂  
+C + SO₂ → CO₂ + S
+[b]Important properties[/b]
+• Does not support combustion.
+• Dissolves in water to form carbonic acid (H₂CO₃).
+• Produced during respiration and combustion.
+[b]Where carbon dioxide is found[/b]
+• In the atmosphere (~0.04%).
+• Produced by living organisms during respiration.
+• Released when fuels burn.
+[b]Uses[/b]
+• In carbonated drinks.
+• In fire extinguishers.
+• Used in greenhouses to help plants grow.
+• Dry ice (solid CO₂) is used for cooling.
+[b]Safety[/b]
+Not toxic in small amounts, but high concentrations can cause suffocation."

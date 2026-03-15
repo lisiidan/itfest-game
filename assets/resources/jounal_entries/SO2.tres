@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="JournalEntryData" load_steps=2 format=3 uid="uid://3sykt7w67af3"]
+
+[ext_resource type="Script" uid="uid://ymttdknt3aee" path="res://scripts/journal_entry_data.gd" id="1_swppq"]
+
+[resource]
+script = ExtResource("1_swppq")
+reagent_id = "SO2"
+title = "Sulfur Dioxide "
+body = "[b]Basic facts[/b]
+[table=2]
+[cell]Formula:[/cell][cell]SO₂[/cell]
+[cell]Molar mass:[/cell][cell]64 g/mol[/cell]
+[cell]State at room temperature:[/cell][cell]Gas[/cell]
+[cell]Color:[/cell][cell]Colorless[/cell]
+[cell]Smell:[/cell][cell]Sharp, irritating odor[/cell]
+[/table]
+[b]Formation reaction[/b]
+S + O₂ → SO₂
+[b]Important properties[/b]
+• Toxic gas that irritates the eyes and lungs.
+• Dissolves in water to form sulfurous acid (H₂SO₃).
+• Formed when sulfur burns in oxygen.
+[b]Where sulfur dioxide is found[/b]
+• Produced by volcanoes.
+• Released when coal or oil containing sulfur burns.
+• Present in some industrial emissions.
+[b]Uses[/b]
+• Production of sulfuric acid (H₂SO₄).
+• Used as a preservative in some foods.
+• Used for bleaching and disinfecting.
+[b]Safety[/b]
+Harmful to breathe and can cause respiratory problems.
+Contributes to acid rain."

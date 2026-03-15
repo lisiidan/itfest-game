@@ -6,4 +6,26 @@
 script = ExtResource("1_ar7ve")
 reagent_id = "Ca"
 title = "Calcium"
-body = "Calcium text"
+body = "[b]Basic facts[/b]
+[table=2]
+[cell]Symbol:[/cell][cell]Ca[/cell]
+[cell]Element:[/cell][cell]Calcium[/cell]
+[cell]Atomic number:[/cell][cell]20[/cell]
+[cell]Molar mass:[/cell][cell]40 g/mol[/cell]
+[cell]State at room temperature:[/cell][cell]Solid metal[/cell]
+[cell]Color:[/cell][cell]Silvery-gray[/cell]
+[/table]
+[b]Important properties[/b]
+• A reactive alkaline earth metal.
+• Reacts with water and oxygen.
+• Forms many important compounds and minerals.
+[b]Where calcium is found[/b]
+• In limestone and chalk (CaCO₃).
+• In bones and teeth of living organisms.
+• In many minerals and rocks.
+[b]Uses[/b]
+• Important for building materials (cement, lime).
+• Used in metallurgy.
+• Calcium compounds are used in agriculture and construction.
+[b]Safety[/b]
+Calcium metal reacts with water and moisture, so it must be handled carefully."

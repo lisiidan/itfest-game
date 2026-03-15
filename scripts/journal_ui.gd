@@ -1,6 +1,7 @@
 extends Control
 
 var journal_font = preload("res://assets/fonts/Jurnal_font.ttf")
+var bold_journal_font = preload("res://assets/fonts/ByteBounce.ttf")
 @export var notebook_path: NodePath
 @export var entries: Array[JournalEntryData] = []
 
@@ -94,8 +95,10 @@ func show_entry(entry_id: String):
 	title_label.add_theme_font_size_override("font_size", 16)
 	title_label.add_theme_color_override("font_color", Color(0.23, 0.18, 0.12))
 	
+	body_label.add_theme_font_override("bold_font", bold_journal_font)
 	body_label.add_theme_font_override("normal_font", journal_font)
 	body_label.add_theme_font_size_override("normal_font_size", 8)
+	body_label.add_theme_font_size_override("bold_font_size", 16)
 	body_label.add_theme_color_override("default_color", Color(0.23, 0.18, 0.12))
 	update_entry_button_styles()
 

@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="JournalEntryData" load_steps=2 format=3 uid="uid://bfq06neb6tkoj"]
+
+[ext_resource type="Script" uid="uid://ymttdknt3aee" path="res://scripts/journal_entry_data.gd" id="1_iln86"]
+
+[resource]
+script = ExtResource("1_iln86")
+reagent_id = "H2CO3"
+title = "Carbonic acid"
+body = "[b]Basic facts[/b]
+[table=2]
+[cell]Formula:[/cell][cell]H₂CO₃[/cell]
+[cell]Molar mass:[/cell][cell]62 g/mol[/cell]
+[cell]State:[/cell][cell]Liquid (solution)[/cell]
+[cell]Type:[/cell][cell]Weak acid[/cell]
+[/table]
+[b]Formation reaction[/b]
+CO₂ + H₂O → H₂CO₃
+[b]Important properties[/b]
+• Forms when carbon dioxide dissolves in water.
+• Unstable — easily breaks down back into CO₂ and water.
+• A weak acid compared to strong acids like HCl.
+[b]Where it is found[/b]
+• In carbonated drinks (soda).
+• In natural waters containing dissolved CO₂.
+• In the human body, where it helps regulate blood pH.
+[b]Uses[/b]
+• Important in the carbon cycle in nature.
+• Responsible for the fizz in sparkling drinks.
+[b]Safety[/b]
+Weak acid and generally not dangerous in small concentrations."

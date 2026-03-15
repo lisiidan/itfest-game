@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="JournalEntryData" load_steps=2 format=3 uid="uid://dvpfme3txonqs"]
+
+[ext_resource type="Script" uid="uid://ymttdknt3aee" path="res://scripts/journal_entry_data.gd" id="1_si3hc"]
+
+[resource]
+script = ExtResource("1_si3hc")
+reagent_id = "Ca3N2"
+title = "Calcium nitride"
+body = "[b]Basic facts[/b]
+[table=2]
+[cell]Formula:[/cell][cell]Ca₃N₂[/cell]
+[cell]Molar mass:[/cell][cell]148 g/mol[/cell]
+[cell]State at room temperature:[/cell][cell]Solid[/cell]
+[cell]Color:[/cell][cell]Dark red-brown solid[/cell]
+[/table]
+[b]Formation reaction[/b]
+3Ca + N₂ → Ca₃N₂
+[b]Important properties[/b]
+• Ionic compound formed from calcium and nitrogen.
+• Reacts with water to produce ammonia.
+• Sensitive to moisture.
+[b]Where it is found[/b]
+• Produced when calcium reacts with nitrogen at high temperature.
+[b]Uses[/b]
+• Used in chemical research and laboratory reactions.
+• Can be used to produce ammonia.
+[b]Safety[/b]
+Reacts with water and moisture, releasing ammonia gas.
+Should be handled in dry conditions."

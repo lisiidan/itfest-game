@@ -6,8 +6,29 @@
 script = ExtResource("1_13lm6")
 reagent_id = "H2"
 title = "Hydrogen"
-body = "Hydrogen is the lightest element.
-
-It is highly flammable and forms water when reacting with oxygen.
-
-Chemical formula: H₂"
+body = "[b]Basic facts[/b]
+[table=2]
+[cell]Formula:[/cell][cell]H₂[/cell]
+[cell]Element:[/cell][cell]Hydrogen[/cell]
+[cell]Atomic number:[/cell][cell]1[/cell]
+[cell]Molar mass:[/cell][cell]2.02 g/mol[/cell]
+[cell]State:[/cell][cell]Gas[/cell]
+[cell]Color:[/cell][cell]Colorless[/cell]
+[/table]
+[b]Important properties[/b]
+1. The lightest element in the periodic table.
+2. Highly flammable (burns easily).
+3. Burns with a pale blue flame.
+4. Forms water when reacting with oxygen.
+[b]Where hydrogen is found[/b]
+In water (H₂O).
+In organic compounds (living organisms, fuels).
+It is the most abundant element in the universe.
+[b]Uses[/b]
+Fuel (hydrogen fuel cells, rocket fuel).
+Production of ammonia (NH₃) for fertilizers.
+Used in chemical industry and hydrogenation of oils.
+[b]Safety[/b]
+Hydrogen forms explosive mixtures with air.
+Must be stored and handled carefully.
+"

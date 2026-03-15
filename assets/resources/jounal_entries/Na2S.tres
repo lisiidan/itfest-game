@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="JournalEntryData" load_steps=2 format=3 uid="uid://cp6wrw1qtkaot"]
+
+[ext_resource type="Script" uid="uid://ymttdknt3aee" path="res://scripts/journal_entry_data.gd" id="1_mirds"]
+
+[resource]
+script = ExtResource("1_mirds")
+reagent_id = "Na2S"
+title = "Sodium sulfide"
+body = "[b]Basic facts[/b]
+[table=2]
+[cell]Formula:[/cell][cell]Na₂S[/cell]
+[cell]Molar mass:[/cell][cell]78 g/mol[/cell]
+[cell]State at room temperature:[/cell][cell]Solid[/cell]
+[cell]Color:[/cell][cell]White to yellow solid[/cell]
+[/table]
+[b]Formation reaction[/b]
+2Na + S → Na₂S  
+Na₂O + H₂S → Na₂S + H₂O
+[b]Important properties[/b]
+• Ionic compound made of sodium and sulfur ions.  
+• Soluble in water.  
+• Reacts with acids to produce hydrogen sulfide gas (H₂S).
+[b]Where sodium sulfide is found[/b]
+• Produced in chemical industry from sodium compounds and sulfur.
+[b]Uses[/b]
+• Used in paper production.  
+• Used in leather processing.  
+• Used in some chemical manufacturing processes.
+[b]Safety[/b]
+Can release toxic hydrogen sulfide gas when reacting with acids.  
+Can irritate skin and eyes."

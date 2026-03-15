@@ -6,4 +6,27 @@
 script = ExtResource("1_gqu0q")
 reagent_id = "N2"
 title = "Nitrogen"
-body = "Nitrogen text"
+body = "[b]Basic facts[/b]
+[table=2]
+[cell]Formula:[/cell][cell]N₂[/cell]
+[cell]Element:[/cell][cell]Nitrogen[/cell]
+[cell]Atomic number:[/cell][cell]7[/cell]
+[cell]Molar mass:[/cell][cell]28 g/mol[/cell]
+[cell]State at room temperature:[/cell][cell]Gas[/cell]
+[cell]Color:[/cell][cell]Colorless[/cell]
+[cell]Smell:[/cell][cell]Odorless[/cell]
+[/table]
+[b]Important properties[/b]
+• Makes up about 78% of Earth’s atmosphere.
+• Very stable and relatively unreactive because of a strong triple bond between nitrogen atoms.
+• Does not support combustion.
+[b]Where nitrogen is found[/b]
+• In the air.
+• In proteins and DNA of living organisms.
+• In many fertilizers.
+[b]Uses[/b]
+• Production of ammonia (NH₃) for fertilizers.
+• Used as an inert gas to prevent unwanted reactions.
+• Liquid nitrogen is used for cooling and freezing.
+[b]Safety[/b]
+Nitrogen is not toxic, but high amounts can replace oxygen in air and cause suffocation."

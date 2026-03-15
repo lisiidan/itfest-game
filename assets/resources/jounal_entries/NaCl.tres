@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="JournalEntryData" load_steps=2 format=3 uid="uid://cwlke5thvhcna"]
+
+[ext_resource type="Script" uid="uid://ymttdknt3aee" path="res://scripts/journal_entry_data.gd" id="1_mu7u0"]
+
+[resource]
+script = ExtResource("1_mu7u0")
+reagent_id = "NaCl"
+title = "Sodium chloride"
+body = "[b]Basic facts[/b]
+[table=2]
+[cell]Formula:[/cell][cell]NaCl[/cell]
+[cell]Common name:[/cell][cell]Table salt[/cell]
+[cell]Molar mass:[/cell][cell]58.5 g/mol[/cell]
+[cell]State at room temperature:[/cell][cell]White solid[/cell]
+[/table]
+[b]Formation reactions[/b]
+2Na + Cl₂ → 2NaCl  
+NaOH + HCl → NaCl + H₂O  
+Na₂O + 2HCl → 2NaCl + H₂O
+[b]Important properties[/b]
+• Ionic compound made of sodium and chlorine ions.
+• Highly soluble in water.
+• Forms crystals with a cubic structure.
+[b]Where sodium chloride is found[/b]
+• In seawater.
+• In rock salt deposits.
+• In living organisms.
+[b]Uses[/b]
+• Food seasoning and preservation.
+• Production of chlorine and sodium hydroxide.
+• Used for de-icing roads.
+[b]Safety[/b]
+Safe in normal amounts, but excessive consumption can be harmful to health."

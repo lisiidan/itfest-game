@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="JournalEntryData" load_steps=2 format=3 uid="uid://c4asfenasdjru"]
+
+[ext_resource type="Script" uid="uid://ymttdknt3aee" path="res://scripts/journal_entry_data.gd" id="1_3nuwp"]
+
+[resource]
+script = ExtResource("1_3nuwp")
+reagent_id = "HNO3"
+title = "Nitric acid"
+body = "[b]Basic facts[/b]
+[table=2]
+[cell]Formula:[/cell][cell]HNO₃[/cell]
+[cell]Molar mass:[/cell][cell]63 g/mol[/cell]
+[cell]State at room temperature:[/cell][cell]Liquid[/cell]
+[cell]Type:[/cell][cell]Strong acid[/cell]
+[/table]
+[b]Formation reaction[/b]
+H₂O + 3NO₂ → 2HNO₃ + NO
+[b]Important properties[/b]
+• Highly corrosive and very reactive.
+• A strong oxidizing agent.
+• Reacts with many metals, bases, and compounds.
+[b]Where nitric acid is found[/b]
+• Produced industrially from ammonia (NH₃).
+• Used widely in chemical industry.
+[b]Uses[/b]
+• Production of fertilizers (nitrates).
+• Used to make explosives and chemicals.
+• Metal cleaning and processing.
+[b]Safety[/b]
+Very corrosive — can cause severe burns to skin and eyes.
+Vapors are harmful to breathe."

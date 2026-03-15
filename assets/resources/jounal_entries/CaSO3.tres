@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="JournalEntryData" load_steps=2 format=3 uid="uid://cttp5n324k5ko"]
+
+[ext_resource type="Script" uid="uid://ymttdknt3aee" path="res://scripts/journal_entry_data.gd" id="1_utkdm"]
+
+[resource]
+script = ExtResource("1_utkdm")
+reagent_id = "CaSO3"
+title = "Calcium sulfite"
+body = "[b]Basic facts[/b]
+[table=2]
+[cell]Formula:[/cell][cell]CaSO₃[/cell]
+[cell]Molar mass:[/cell][cell]120 g/mol[/cell]
+[cell]State at room temperature:[/cell][cell]White solid[/cell]
+[/table]
+[b]Formation reactions[/b]
+Ca + H₂SO₃ → CaSO₃ + H₂  
+Ca(OH)₂ + SO₂ → CaSO₃ + H₂O  
+CaO + SO₂ → CaSO₃  
+Ca(OH)₂ + H₂SO₃ → CaSO₃ + 2H₂O  
+CaO + H₂SO₃ → CaSO₃ + H₂O
+[b]Important properties[/b]
+• Ionic compound made of calcium and sulfite ions.  
+• Slightly soluble in water.  
+• Reacts with acids to release sulfur dioxide (SO₂).
+[b]Where calcium sulfite is found[/b]
+• Formed when sulfur dioxide reacts with calcium compounds such as calcium hydroxide.
+[b]Uses[/b]
+• Used in water treatment.  
+• Used to remove sulfur dioxide from industrial gases.  
+• Used in some chemical processes.
+[b]Safety[/b]
+Can release irritating sulfur dioxide gas when reacting with acids.  
+Dust may irritate the eyes and respiratory system."

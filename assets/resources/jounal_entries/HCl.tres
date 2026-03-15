@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="JournalEntryData" load_steps=2 format=3 uid="uid://8unlyx6ulkfs"]
+
+[ext_resource type="Script" uid="uid://ymttdknt3aee" path="res://scripts/journal_entry_data.gd" id="1_6fcyd"]
+
+[resource]
+script = ExtResource("1_6fcyd")
+reagent_id = "HCl"
+title = "Hydrochloric acid"
+body = "[b]Basic facts[/b]
+[table=2]
+[cell]Formula:[/cell][cell]HCl[/cell]
+[cell]Molar mass:[/cell][cell]36.5 g/mol[/cell]
+[cell]State at room temperature:[/cell][cell]Liquid (solution)[/cell]
+[cell]Type:[/cell][cell]Strong acid[/cell]
+[/table]
+[b]Formation reactions[/b]
+H₂ + Cl₂ → 2HCl  
+H₂S + Cl₂ → 2HCl + S
+[b]Important properties[/b]
+• Highly acidic and very reactive.
+• Corrosive to metals and tissues.
+• Reacts with bases to form salt and water.
+• Reacts with some metals to produce hydrogen gas.
+[b]Where it is found[/b]
+• In gastric juice in the human stomach.
+• Produced industrially for chemical processes.
+[b]Uses[/b]
+• Cleaning metals (removing rust).
+• Production of chlorides and other chemicals.
+• Used in laboratories and industry.
+[b]Safety[/b]
+Strongly corrosive — can damage skin, eyes, and materials.
+Vapors can irritate the respiratory system."

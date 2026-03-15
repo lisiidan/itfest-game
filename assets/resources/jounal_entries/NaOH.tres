@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="JournalEntryData" load_steps=2 format=3 uid="uid://mjwgph7ivpue"]
+
+[ext_resource type="Script" uid="uid://ymttdknt3aee" path="res://scripts/journal_entry_data.gd" id="1_mbnyv"]
+
+[resource]
+script = ExtResource("1_mbnyv")
+reagent_id = "NaOH"
+title = "Sodium hydroxide"
+body = "[b]Basic facts[/b]
+[table=2]
+[cell]Formula:[/cell][cell]NaOH[/cell]
+[cell]Molar mass:[/cell][cell]40 g/mol[/cell]
+[cell]State at room temperature:[/cell][cell]Solid (white)[/cell]
+[cell]Type:[/cell][cell]Strong base (alkali)[/cell]
+[/table]
+[b]Formation reactions[/b]
+2Na + 2H₂O → 2NaOH + H₂  
+Na₂O + H₂O → 2NaOH
+[b]Important properties[/b]
+• Highly soluble in water.
+• Forms a strong alkaline solution.
+• Corrosive — can damage skin and materials.
+• Reacts with acids to form salt and water.
+[b]Where it is used[/b]
+• Making soap and detergents.
+• Cleaning products (drain cleaners).
+• Production of paper and textiles.
+• Used in many chemical reactions.
+[b]Safety[/b]
+Very corrosive — can cause burns on skin and eyes.
+Must be handled with protective equipment."

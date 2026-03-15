@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="JournalEntryData" load_steps=2 format=3 uid="uid://c7ymmvjw1adwt"]
+
+[ext_resource type="Script" uid="uid://ymttdknt3aee" path="res://scripts/journal_entry_data.gd" id="1_uscna"]
+
+[resource]
+script = ExtResource("1_uscna")
+reagent_id = "NH3"
+title = "Ammonia"
+body = "[b]Basic facts[/b]
+[table=2]
+[cell]Formula:[/cell][cell]NH₃[/cell]
+[cell]Molar mass:[/cell][cell]17 g/mol[/cell]
+[cell]State at room temperature:[/cell][cell]Gas[/cell]
+[cell]Color:[/cell][cell]Colorless[/cell]
+[cell]Smell:[/cell][cell]Sharp, strong odor[/cell]
+[/table]
+[b]Formation reaction[/b]
+N₂ + 3H₂ → 2NH₃
+[b]Important properties[/b]
+• Basic gas that dissolves easily in water.
+• Forms ammonium hydroxide (NH₄OH) in solution.
+• Lighter than air.
+• Can react with acids to form ammonium salts.
+[b]Where ammonia is found[/b]
+• Produced by decomposition of organic matter.
+• Found in small amounts in the atmosphere.
+• Produced industrially from nitrogen and hydrogen.
+[b]Uses[/b]
+• Production of fertilizers.
+• Used in cleaning products.
+• Important chemical in industry.
+[b]Safety[/b]
+Toxic and irritating gas that can damage the eyes and lungs in high concentrations."

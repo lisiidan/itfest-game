@@ -21,7 +21,7 @@ var map = {
 		"water": "H2O",
 		"sodium_hydroxide": "NaOH",
 		"hydrochloric_acid": "HCl",
-		"sodium_chloride": "NaCl",
+		#"sodium_chloride": "NaCl",
 		"carbon_dioxide": "CO2",
 		"sulfur_dioxide": "SO2",
 		"carbonic_acid": "H2CO3",
@@ -69,6 +69,14 @@ func _input(event):
 		var flask = get_tree().get_first_node_in_group("mixer_flask")
 		if flask and flask.contains_point(mouse_pos):
 			flask.add_reagent(reagent_id)
+			reset_position()
+			return
+
+		var cat = get_tree().get_first_node_in_group("cat")
+		if cat and cat.contains_point(mouse_pos):
+			cat.react_to_reagent(reagent_id)
+			reset_position()
+			return
 
 		reset_position()
 

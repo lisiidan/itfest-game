@@ -6,5 +6,32 @@
 script = ExtResource("1_5vwy8")
 reagent_id = "H2O"
 title = "Water"
-body = "Water text
+body = "[b]Basic facts[/b]
+[table=2]
+[cell]Formula:[/cell][cell]H₂O[/cell]
+[cell]Molar mass:[/cell][cell]18 g/mol[/cell]
+[cell]State at room temperature:[/cell][cell]Liquid[/cell]
+[cell]Color:[/cell][cell]Colorless[/cell]
+[cell]Smell:[/cell][cell]Odorless[/cell]
+[cell]Boiling point:[/cell][cell]100 °C[/cell]
+[cell]Freezing point:[/cell][cell]0 °C[/cell]
+[/table]
+[b]Formation reaction[/b]
+2H₂ + O₂ → 2H₂O
+[b]Important properties[/b]
+• Essential for all known life.
+• A very good solvent (dissolves many substances).
+• Exists in three states: ice (solid), water (liquid), and steam (gas).
+• Has high heat capacity, helping regulate temperature on Earth.
+[b]Where water is found[/b]
+• In oceans, rivers, and lakes.
+• In the atmosphere as water vapor.
+• In living organisms.
+[b]Uses[/b]
+• Drinking and agriculture.
+• Industrial processes.
+• Cooling and heating systems.
+• Chemical reactions.
+[b]Safety[/b]
+Water itself is safe, but polluted water can contain harmful substances or microorganisms.
 "

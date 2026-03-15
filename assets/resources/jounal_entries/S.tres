@@ -6,4 +6,26 @@
 script = ExtResource("1_2g00v")
 reagent_id = "S"
 title = "Sulfur"
-body = "Sulfur text"
+body = "[b]Basic facts[/b]
+[table=2]
+[cell]Symbol:[/cell][cell]S[/cell]
+[cell]Element:[/cell][cell]Sulfur[/cell]
+[cell]Atomic number:[/cell][cell]16[/cell]
+[cell]Molar mass:[/cell][cell]32 g/mol[/cell]
+[cell]State at room temperature:[/cell][cell]Solid[/cell]
+[cell]Color:[/cell][cell]Yellow[/cell]
+[/table]
+[b]Important properties[/b]
+• A non-metal element.
+• Burns in oxygen with a blue flame.
+• Forms many compounds, especially sulfides and sulfates.
+[b]Where sulfur is found[/b]
+• In volcanic areas.
+• In some minerals.
+• In proteins of living organisms.
+[b]Uses[/b]
+• Production of sulfuric acid (H₂SO₄).
+• Used in fertilizers.
+• Used in matches, rubber, and chemicals.
+[b]Safety[/b]
+Burning sulfur produces sulfur dioxide (SO₂), a toxic gas that can irritate the lungs."

@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="JournalEntryData" load_steps=2 format=3 uid="uid://dwhktq461w5o7"]
+
+[ext_resource type="Script" uid="uid://ymttdknt3aee" path="res://scripts/journal_entry_data.gd" id="1_n06xo"]
+
+[resource]
+script = ExtResource("1_n06xo")
+reagent_id = "NO"
+title = "Nitric oxide"
+body = "[b]Basic facts[/b]
+[table=2]
+[cell]Formula:[/cell][cell]NO[/cell]
+[cell]Molar mass:[/cell][cell]30 g/mol[/cell]
+[cell]State at room temperature:[/cell][cell]Gas[/cell]
+[cell]Color:[/cell][cell]Colorless[/cell]
+[cell]Smell:[/cell][cell]Slight odor[/cell]
+[/table]
+[b]Formation reaction[/b]
+N₂ + O₂ → 2NO
+[b]Important properties[/b]
+• Reactive gas that easily reacts with oxygen.
+• In air it quickly forms nitrogen dioxide (NO₂).
+[b]Where nitric oxide is found[/b]
+• Produced during high-temperature combustion (car engines, power plants).
+• Formed naturally in lightning.
+• Also produced in small amounts in the human body.
+[b]Uses[/b]
+• Used in medicine to help treat some lung conditions.
+• Important intermediate in chemical reactions.
+[b]Safety[/b]
+Toxic in high concentrations and can form harmful air pollutants."

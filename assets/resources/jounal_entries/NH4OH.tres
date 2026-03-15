@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="JournalEntryData" load_steps=2 format=3 uid="uid://bho47cj3aeewp"]
+
+[ext_resource type="Script" uid="uid://ymttdknt3aee" path="res://scripts/journal_entry_data.gd" id="1_6ges8"]
+
+[resource]
+script = ExtResource("1_6ges8")
+reagent_id = "NH4OH"
+title = "Ammonium hydroxide"
+body = "[b]Basic facts[/b]
+[table=2]
+[cell]Formula:[/cell][cell]NH₄OH[/cell]
+[cell]Molar mass:[/cell][cell]35 g/mol[/cell]
+[cell]State:[/cell][cell]Aqueous solution (ammonia dissolved in water)[/cell]
+[cell]Type:[/cell][cell]Weak base[/cell]
+[/table]
+[b]Formation reaction[/b]
+NH₃ + H₂O → NH₄OH
+[b]Important properties[/b]
+• Formed when ammonia dissolves in water.  
+• Has a strong ammonia smell.  
+• Produces alkaline solutions.
+[b]Where ammonium hydroxide is found[/b]
+• In cleaning solutions.  
+• In laboratories and industry.
+[b]Uses[/b]
+• Household cleaners.  
+• Production of fertilizers and chemicals.  
+• Used in laboratory reactions.
+[b]Safety[/b]
+Irritating to skin, eyes, and lungs.  
+Vapors should not be inhaled."

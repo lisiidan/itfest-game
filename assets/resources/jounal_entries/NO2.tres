@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="JournalEntryData" load_steps=2 format=3 uid="uid://bppo7ky8c7i1b"]
+
+[ext_resource type="Script" uid="uid://ymttdknt3aee" path="res://scripts/journal_entry_data.gd" id="1_fjvmi"]
+
+[resource]
+script = ExtResource("1_fjvmi")
+reagent_id = "NO2"
+title = "Nitrogen dioxide"
+body = "[b]Basic facts[/b]
+[table=2]
+[cell]Formula:[/cell][cell]NO₂[/cell]
+[cell]Molar mass:[/cell][cell]46 g/mol[/cell]
+[cell]State at room temperature:[/cell][cell]Gas[/cell]
+[cell]Color:[/cell][cell]Brown gas[/cell]
+[cell]Smell:[/cell][cell]Sharp, irritating odor[/cell]
+[/table]
+[b]Formation reaction[/b]
+2NO + O₂ → 2NO₂
+[b]Important properties[/b]
+• Toxic and reactive gas.
+• Dissolves in water to form nitric acid (HNO₃).
+[b]Where nitrogen dioxide is found[/b]
+• Produced by car engines and industrial combustion.
+• Present in air pollution and smog.
+[b]Uses[/b]
+• Used in the production of nitric acid.
+• Important intermediate in chemical industry.
+[b]Safety[/b]
+Very harmful to breathe and can damage the lungs.
+Contributes to acid rain and air pollution."

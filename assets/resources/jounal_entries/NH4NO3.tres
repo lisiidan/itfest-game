@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="JournalEntryData" load_steps=2 format=3 uid="uid://db76yheunnaq2"]
+
+[ext_resource type="Script" uid="uid://ymttdknt3aee" path="res://scripts/journal_entry_data.gd" id="1_jim46"]
+
+[resource]
+script = ExtResource("1_jim46")
+reagent_id = "NH4NO3"
+title = "Ammonium nitrate"
+body = "[b]Basic facts[/b]
+[table=2]
+[cell]Formula:[/cell][cell]NH₄NO₃[/cell]
+[cell]Molar mass:[/cell][cell]80 g/mol[/cell]
+[cell]State at room temperature:[/cell][cell]White solid[/cell]
+[/table]
+[b]Formation reaction[/b]
+NH₃ + HNO₃ → NH₄NO₃
+[b]Important properties[/b]
+• Ionic compound made of ammonium (NH₄⁺) and nitrate (NO₃⁻) ions.  
+• Highly soluble in water.  
+• Strong oxidizing compound.
+[b]Where ammonium nitrate is found[/b]
+• Produced in the chemical industry.  
+• Used widely in agriculture.
+[b]Uses[/b]
+• Fertilizers.  
+• Used in cold packs because dissolving absorbs heat.  
+• Used in some industrial explosives.
+[b]Safety[/b]
+Can decompose explosively under high heat or contamination.  
+Must be stored and handled carefully."

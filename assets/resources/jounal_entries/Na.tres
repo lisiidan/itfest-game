@@ -6,4 +6,27 @@
 script = ExtResource("1_8qw52")
 reagent_id = "Na"
 title = "Sodium"
-body = "Sodium text"
+body = "[b]Basic facts[/b]
+[table=2]
+[cell]Symbol:[/cell][cell]Na[/cell]
+[cell]Element:[/cell][cell]Sodium[/cell]
+[cell]Atomic number:[/cell][cell]11[/cell]
+[cell]Molar mass:[/cell][cell]23 g/mol[/cell]
+[cell]State at room temperature:[/cell][cell]Solid metal[/cell]
+[cell]Color:[/cell][cell]Soft, shiny silver metal (when freshly cut)[/cell]
+[/table]
+[b]Important properties[/b]
+• A very reactive metal.
+• Belongs to the alkali metals group.
+• Soft — can be cut with a knife.
+• Reacts quickly with water and air.
+[b]Where sodium is found[/b]
+• In table salt (NaCl).
+• In seawater.
+• In many minerals and compounds.
+[b]Uses[/b]
+• Production of chemicals and compounds.
+• Used in sodium lamps for street lighting.
+• Important in industry and chemical reactions.
+[b]Safety[/b]
+Sodium reacts violently with water and must be stored under oil to prevent contact with air and moisture."

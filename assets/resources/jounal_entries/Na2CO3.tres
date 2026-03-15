@@ -1,0 +1,34 @@
+[gd_resource type="Resource" script_class="JournalEntryData" load_steps=2 format=3 uid="uid://cchim7vl7cga1"]
+
+[ext_resource type="Script" uid="uid://ymttdknt3aee" path="res://scripts/journal_entry_data.gd" id="1_6lr4b"]
+
+[resource]
+script = ExtResource("1_6lr4b")
+reagent_id = "Na2CO3"
+title = "Sodium carbonate"
+body = "[b]Basic facts[/b]
+[table=2]
+[cell]Formula:[/cell][cell]Na₂CO₃[/cell]
+[cell]Common name:[/cell][cell]Soda ash / Washing soda[/cell]
+[cell]Molar mass:[/cell][cell]106 g/mol[/cell]
+[cell]State at room temperature:[/cell][cell]White solid[/cell]
+[/table]
+[b]Formation reactions[/b]
+2NaOH + CO₂ → Na₂CO₃ + H₂O  
+2Na + H₂CO₃ → Na₂CO₃ + H₂  
+2NaOH + H₂CO₃ → Na₂CO₃ + 2H₂O  
+Na₂O + CO₂ → Na₂CO₃  
+Na₂O + H₂CO₃ → Na₂CO₃ + H₂O
+[b]Important properties[/b]
+• Ionic compound.  
+• Soluble in water, forming an alkaline solution.  
+• Reacts with acids to produce carbon dioxide.
+[b]Where sodium carbonate is found[/b]
+• In some natural mineral deposits (trona).  
+• Produced industrially by the Solvay process.
+[b]Uses[/b]
+• Glass production.  
+• Detergents and cleaning products.  
+• Water softening.
+[b]Safety[/b]
+Can irritate skin and eyes in concentrated form."

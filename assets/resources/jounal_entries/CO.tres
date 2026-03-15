@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="JournalEntryData" load_steps=2 format=3 uid="uid://gj8aqn145exx"]
+
+[ext_resource type="Script" uid="uid://ymttdknt3aee" path="res://scripts/journal_entry_data.gd" id="1_tf8mg"]
+
+[resource]
+script = ExtResource("1_tf8mg")
+reagent_id = "CO"
+title = "Carbon monoxide"
+body = "[b]Basic facts[/b]
+[table=2]
+[cell]Formula:[/cell][cell]CO[/cell]
+[cell]Molar mass:[/cell][cell]28 g/mol[/cell]
+[cell]State at room temperature:[/cell][cell]Gas[/cell]
+[cell]Color:[/cell][cell]Colorless[/cell]
+[cell]Smell:[/cell][cell]Odorless[/cell]
+[/table]
+[b]Formation reaction[/b]
+C + CO₂ → 2CO
+[b]Important properties[/b]
+• Highly toxic gas.
+• Produced during incomplete combustion of carbon fuels.
+• Flammable and burns in oxygen.
+[b]Where carbon monoxide is found[/b]
+• Produced by car engines.
+• Formed when coal, gas, or wood burns without enough oxygen.
+• Can accumulate in poorly ventilated spaces.
+[b]Uses[/b]
+• Used in industrial chemical processes.
+• Important in the production of fuels and chemicals.
+[b]Safety[/b]
+Very dangerous because it is colorless and odorless.
+Prevents blood from carrying oxygen, which can cause serious poisoning or death."
