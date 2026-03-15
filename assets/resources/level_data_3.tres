@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="LevelData" load_steps=2 format=3 uid="uid://3gpnk4mk3p87"]
+
+[ext_resource type="Script" uid="uid://bjvq7ucmegius" path="res://scripts/level_data.gd" id="1_77yig"]
+
+[resource]
+script = ExtResource("1_77yig")
+reagents = Array[String](["hydrogen", "oxygen"])
+intro_text = "Test"
+goals = Array[String](["Make water"])
+goal_results = Array[String](["H2O"])

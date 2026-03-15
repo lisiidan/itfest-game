@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bv67if74gx2px"]
+[gd_scene load_steps=16 format=3 uid="uid://bv67if74gx2px"]
 
 [ext_resource type="Script" uid="uid://cqhgggoc6cthm" path="res://scripts/game_scene.gd" id="1_mixcd"]
 [ext_resource type="Texture2D" uid="uid://c1m2wbfgqcxc1" path="res://assets/sprites/GameScenePlaceholder.png" id="1_mlf6e"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://drajyubjms2jc" path="res://assets/sprites/flask_full.png" id="10_tcjrq"]
 [ext_resource type="Texture2D" uid="uid://dkh1u6o23if24" path="res://assets/sprites/flask_half.png" id="11_rvs2r"]
 [ext_resource type="Texture2D" uid="uid://df3xgalieheu6" path="res://assets/sprites/bubble.png" id="12_rvs2r"]
+[ext_resource type="PackedScene" uid="uid://k0gw8au1efeb" path="res://scenes/level_complete_menu.tscn" id="13_tqxxy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_utbpp"]
 size = Vector2(168, 199)
@@ -122,6 +123,9 @@ offset_left = 1453.0
 offset_top = 855.0
 offset_right = 1865.0
 offset_bottom = 998.0
+
+[node name="LevelCompleteMenu" parent="UI" instance=ExtResource("13_tqxxy")]
+visible = false
 
 [connection signal="input_event" from="MixerFlask" to="MixerFlask" method="_on_input_event"]
 [connection signal="timeout" from="MixerFlask/FeedbackTimer" to="MixerFlask" method="_on_feedback_timer_timeout"]

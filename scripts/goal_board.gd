@@ -1,5 +1,7 @@
 extends Node2D
 
+signal all_goals_completed
+
 @onready var goal_text: RichTextLabel = $GoalText
 @onready var goals_container: Node2D = $GoalsContainer
 
@@ -37,7 +39,6 @@ func show_goal(text: String):
 		goal_visible_chars[i] = 0
 		goal_labels[i].modulate = Color(1, 1, 1, 1)
 
-
 func setup_goals(goals: Array[String], results: Array[String]):
 	goal_strike_lines.clear()
 	goal_results = results
@@ -57,10 +58,7 @@ func setup_goals(goals: Array[String], results: Array[String]):
 		var label := RichTextLabel.new()
 		label.text = ""
 		label.position = Vector2(0, y)
-
-		# та же правая граница, что у GoalText
 		label.size = Vector2(goal_text.size.x, 200)
-
 		label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		label.scroll_active = false
 		label.fit_content = true
@@ -71,24 +69,22 @@ func setup_goals(goals: Array[String], results: Array[String]):
 
 		goals_container.add_child(label)
 		goal_labels.append(label)
-		
+
 		var line := ColorRect.new()
 		line.color = Color(0.85, 0.85, 0.85, 0.95)
 		line.position = Vector2(18, y + 18)
 		line.size = Vector2(0, 3)
 		goals_container.add_child(line)
 		goal_strike_lines.append(line)
-		
+
 		var full_line := "• " + goals[i]
 		goal_full_texts.append(full_line)
 		goal_visible_chars.append(0)
 
-		# временно ставим полный текст, чтобы посчитать реальную высоту
 		label.text = full_line
 		await get_tree().process_frame
 		y += label.get_content_height() + 8
 		label.text = ""
-
 
 func _process(delta: float) -> void:
 	if typing_mode == "idle":
@@ -127,14 +123,24 @@ func _process(delta: float) -> void:
 				if current_goal_index >= goal_labels.size():
 					typing_mode = "idle"
 
-
 func check_goal(result: String):
 	for i in range(goal_results.size()):
 		if goal_results[i] == result and not completed[i]:
 			completed[i] = true
-			complete_goal(i)
+			await complete_goal(i)
+
+			if are_all_goals_completed():
+				all_goals_completed.emit()
 			break
 
+func are_all_goals_completed() -> bool:
+	if completed.is_empty():
+		return false
+
+	for value in completed:
+		if not value:
+			return false
+	return true
 
 func complete_goal(i: int):
 	var plain_text = goal_full_texts[i]
@@ -156,3 +162,4 @@ func complete_goal(i: int):
 
 	var tween = create_tween()
 	tween.tween_property(line, "size:x", target_width, 0.25)
+	await tween.finished
