@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://dq466355lfg3i"]
+
+[ext_resource type="Texture2D" uid="uid://bc1eahuqob6lx" path="res://assets/sprites/info_bubble.png" id="1_bvxl2"]
+[ext_resource type="Script" uid="uid://d0p1qhavwy0dr" path="res://scripts/reagent_tooltip.gd" id="1_jq7nj"]
+[ext_resource type="FontFile" uid="uid://bxx1rg8now3d2" path="res://assets/fonts/Jurnal_font.ttf" id="3_1t3tv"]
+
+[node name="ReagentTooltip" type="Control"]
+visible = false
+z_index = 3
+layout_mode = 3
+anchor_right = 0.033333335
+anchor_bottom = 0.037037037
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_jq7nj")
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource("1_bvxl2")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.109375
+anchor_top = 0.175
+anchor_right = 0.890625
+anchor_bottom = 0.825
+theme_override_fonts/normal_font = ExtResource("3_1t3tv")
+theme_override_font_sizes/normal_font_size = 24
+scroll_active = false
+metadata/_edit_use_anchors_ = true

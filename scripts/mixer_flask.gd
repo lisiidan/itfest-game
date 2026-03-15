@@ -12,6 +12,9 @@ extends Area2D
 
 @onready var feedback_label: Label = $"../UI/LabUI/FeedbackLabel"
 
+@onready var explosion_shards: Sprite2D = $ExplosionShards
+@onready var screen_flash: ColorRect = $"../UI/ScreenFlash"
+
 var pending_shelf_reagents: Array[String] = []
 var last_reaction_type: String = "neutral"
 
@@ -137,6 +140,68 @@ func play_bubbles():
 		bubbles.restart()
 		bubbles.emitting = true
 
+func is_explosive_pair(a: String, b: String) -> bool:
+	return (a == "H2O" and b == "Na") or (a == "Na" and b == "H2O")
+
+func trigger_explosion():
+	locked = true
+	pending_shelf_reagents.clear()
+	last_reaction_type = "explosion"
+
+	contents.clear()
+	#contents.append("BOOM")
+	update_ui()
+
+	set_liquid_level(2)
+	set_liquid_color(Color(1.0, 0.8, 0.2, 1.0))
+	set_bubbles_color(Color(1.0, 0.8, 0.2, 1.0))
+	play_bubbles()
+	show_feedback("Explosion! The experiment failed.", Color.WHITE)
+
+	var cat = get_tree().get_first_node_in_group("cat")
+	if cat and cat.has_method("play_scared"):
+		cat.play_scared()
+
+	shake_big()
+	await play_explosion_flash_sequence()
+
+	var game = get_tree().get_first_node_in_group("game_controller")
+	if game and game.has_method("fail_level"):
+		game.fail_level()
+
+func play_explosion_flash_sequence() -> void:
+	if screen_flash:
+		screen_flash.visible = true
+		screen_flash.color = Color.WHITE
+		screen_flash.modulate.a = 0.0
+
+	# резкая вспышка
+	var flash_in = create_tween()
+	flash_in.tween_property(screen_flash, "modulate:a", 1.0, 0.06)
+	await flash_in.finished
+
+	# маленький hit stop
+	get_tree().paused = true
+	await get_tree().create_timer(0.06, true, false, true).timeout
+	get_tree().paused = false
+
+	# скрываем колбу, показываем осколки
+	flask_visual.visible = false
+	liquid_half.visible = false
+	liquid_full.visible = false
+
+	if explosion_shards:
+		explosion_shards.visible = true
+		explosion_shards.modulate = Color.WHITE
+
+	# плавное прояснение
+	var flash_out = create_tween()
+	flash_out.tween_property(screen_flash, "modulate:a", 0.0, 0.45)
+	await flash_out.finished
+
+	if screen_flash:
+		screen_flash.visible = false
+
 func resolve_reaction():
 	if contents.size() != 2:
 		return
@@ -145,6 +210,11 @@ func resolve_reaction():
 
 	var a = contents[0]
 	var b = contents[1]
+
+	if is_explosive_pair(a, b):
+		trigger_explosion()
+		return
+
 	var reaction = reaction_system.check_reaction(a, b)
 	last_reaction_type = reaction["type"]
 
@@ -229,6 +299,18 @@ func flash_liquid(color: Color):
 		set_liquid_color(original_modulate)
 	)
 
+func flash_explosion():
+	flask_visual.modulate = Color(1.8, 1.5, 0.7, 1.0)
+	liquid_half.modulate = Color(2.0, 1.4, 0.4, 1.0)
+	liquid_full.modulate = Color(2.0, 1.4, 0.4, 1.0)
+
+	var tween = create_tween()
+	tween.tween_interval(0.12)
+	tween.tween_callback(func():
+		flask_visual.modulate = Color.WHITE
+		set_liquid_color(Color(1.0, 0.72, 0.18, 1.0))
+	)
+
 func reset_flask():
 	pending_shelf_reagents.clear()
 	contents.clear()
@@ -243,10 +325,22 @@ func reset_flask():
 
 	if feedback_label:
 		feedback_label.visible = false
+	
+	if explosion_shards:
+		explosion_shards.visible = false
 
+	if screen_flash:
+		screen_flash.visible = false
+		screen_flash.modulate.a = 0.0
+
+	flask_visual.visible = true
+	
 	update_ui()
 
 func clear_flask():
+	if last_reaction_type == "explosion":
+		return
+
 	for reagent in pending_shelf_reagents:
 		goal_board.check_goal(reagent)
 
@@ -369,3 +463,15 @@ func shake_flask():
 	tween.tween_property(self, "position", original_pos + Vector2(-4, 0), 0.04)
 	tween.tween_property(self, "position", original_pos + Vector2(4, 0), 0.04)
 	tween.tween_property(self, "position", original_pos, 0.04)
+
+func shake_big():
+	var original_pos = position
+	var tween = create_tween()
+
+	tween.tween_property(self, "position", original_pos + Vector2(-10, 0), 0.03)
+	tween.tween_property(self, "position", original_pos + Vector2(10, 0), 0.03)
+	tween.tween_property(self, "position", original_pos + Vector2(-8, -4), 0.03)
+	tween.tween_property(self, "position", original_pos + Vector2(8, 4), 0.03)
+	tween.tween_property(self, "position", original_pos + Vector2(-6, 0), 0.03)
+	tween.tween_property(self, "position", original_pos + Vector2(6, 0), 0.03)
+	tween.tween_property(self, "position", original_pos, 0.03)

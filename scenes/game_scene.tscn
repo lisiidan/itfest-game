@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://bv67if74gx2px"]
+[gd_scene load_steps=35 format=3 uid="uid://bv67if74gx2px"]
 
 [ext_resource type="Script" uid="uid://cqhgggoc6cthm" path="res://scripts/game_scene.gd" id="1_mixcd"]
 [ext_resource type="Texture2D" uid="uid://c1m2wbfgqcxc1" path="res://assets/sprites/GameScenePlaceholder.png" id="1_mlf6e"]
@@ -28,6 +28,7 @@
 [ext_resource type="Resource" uid="uid://b0j0clb31qfie" path="res://assets/resources/jounal_entries/H2O.tres" id="23_ttvoq"]
 [ext_resource type="Resource" uid="uid://ls8kwu1avqt8" path="res://assets/resources/jounal_entries/H2S.tres" id="24_rw4oa"]
 [ext_resource type="Texture2D" uid="uid://wdp7ocfqk070" path="res://assets/sprites/feedback_bubble.png" id="25_r47aq"]
+[ext_resource type="PackedScene" uid="uid://dq466355lfg3i" path="res://scenes/reagent_tooltip.tscn" id="27_gqftm"]
 [ext_resource type="PackedScene" uid="uid://c3mffqf2yya50" path="res://scenes/cat.tscn" id="29_6irsn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_utbpp"]
@@ -132,6 +133,9 @@ one_shot = true
 explosiveness = 0.8
 process_material = SubResource("ParticleProcessMaterial_tcjrq")
 
+[node name="ExplosionShards" type="Sprite2D" parent="MixerFlask"]
+visible = false
+
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="JournalUI" parent="UI" instance=ExtResource("13_5ay1a")]
@@ -160,6 +164,17 @@ autowrap_mode = 3
 
 [node name="LevelCompleteMenu" parent="UI" instance=ExtResource("13_tqxxy")]
 visible = false
+
+[node name="ScreenFlash" type="ColorRect" parent="UI"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ReagentTooltip" parent="UI" instance=ExtResource("27_gqftm")]
 
 [node name="Notebook" type="Area2D" parent="."]
 position = Vector2(1174, 1005.00006)

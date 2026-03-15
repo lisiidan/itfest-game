@@ -4,13 +4,18 @@ extends Node2D
 @onready var reagent_shelf: Node2D = $ReagentShelf
 @onready var level_complete_menu: Control = $UI/LevelCompleteMenu
 @onready var mixer_flask: Area2D = $MixerFlask
+
 const LEVEL_COMPLETE_DELAY := 0.8
+const LEVEL_FAILED_DELAY := 2.0
+
 var level_index := 0
 var current_level: LevelData
 var max_level_count := 3
 var level_finished := false
 
 func _ready():
+	add_to_group("game_controller")
+
 	goal_board.all_goals_completed.connect(_on_all_goals_completed)
 
 	level_complete_menu.next_pressed.connect(_on_next_pressed)
@@ -31,11 +36,6 @@ func _on_retry_pressed():
 func _on_menu_pressed():
 	level_complete_menu.close_menu()
 	return_to_main_menu()
-
-#func _ready():
-	#goal_board.all_goals_completed.connect(_on_all_goals_completed)
-	#level_complete_menu.hide()
-	#load_level(level_index)
 
 func load_level(index: int):
 	level_finished = false
@@ -68,10 +68,16 @@ func _on_all_goals_completed():
 	await get_tree().create_timer(LEVEL_COMPLETE_DELAY).timeout
 	level_complete_menu.show_for_level_complete(level_index)
 
+func fail_level():
+	if level_finished:
+		return
+
+	level_finished = true
+	await get_tree().create_timer(LEVEL_FAILED_DELAY).timeout
+	level_complete_menu.show_for_level_failed(level_index)
+
 func go_to_next_level():
 	level_index += 1
-	#if(level_index > max_level_count):
-		#level_index = 0
 	load_level(level_index)
 
 func restart_level():
