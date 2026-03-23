@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_8kg87")
 reagents = Array[String](["hydrogen", "oxygen", "nitrogen", "chlorine", "carbon", "sodium", "sulfur", "calcium", "water", "carbon_dioxide", "hydrogen_sulfide"])
-intro_text = "Medium Tasks:
-"
+intro_text = "Medium Tasks.
+Consider reading the journal."
 goals = Array[String](["Make the main acid from stomach", "Make a strong base"])
 goal_results = Array[String](["HCl", "NaOH"])

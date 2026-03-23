@@ -77,7 +77,7 @@ func setup_goals(goals: Array[String], results: Array[String]):
 		goals_container.add_child(line)
 		goal_strike_lines.append(line)
 
-		var full_line := "• " + goals[i]
+		var full_line := "- " + goals[i]
 		goal_full_texts.append(full_line)
 		goal_visible_chars.append(0)
 
@@ -144,10 +144,10 @@ func are_all_goals_completed() -> bool:
 
 func complete_goal(i: int):
 	var plain_text = goal_full_texts[i]
-	if plain_text.begins_with("• "):
+	if plain_text.begins_with("- "):
 		plain_text = plain_text.substr(2)
 
-	goal_full_texts[i] = "✓ " + plain_text
+	goal_full_texts[i] = "- " + plain_text
 	goal_labels[i].text = goal_full_texts[i]
 	goal_labels[i].modulate = Color(0.6, 0.6, 0.6, 1.0)
 

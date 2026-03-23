@@ -17,13 +17,14 @@ func reset_to_default():
 
 func unlock_entry(entry_id: String):
 	if entry_id == "":
-		return
+		return false
 
 	if unlocked_entries.has(entry_id):
-		return
+		return false
 
 	unlocked_entries.append(entry_id)
 	entry_unlocked.emit(entry_id)
+	return true
 
 func is_unlocked(entry_id: String) -> bool:
 	return unlocked_entries.has(entry_id)

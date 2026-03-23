@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://m8mimaao61t6"]
+
+[ext_resource type="Script" uid="uid://clr0lw1sgiont" path="res://scripts/music_player.gd" id="1_ql6qh"]
+[ext_resource type="AudioStream" uid="uid://coj1ksbn6wk5b" path="res://assets/background_music.ogg" id="2_ql6qh"]
+
+[node name="MusicPlayer" type="Node"]
+process_mode = 3
+script = ExtResource("1_ql6qh")
+
+[node name="BGM" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_ql6qh")
+volume_db = -10.0
+parameters/looping = true

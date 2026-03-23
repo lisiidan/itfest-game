@@ -272,8 +272,8 @@ func resolve_reaction():
 
 			var unlocked_any := false
 			for product in products:
-				JournalManager.unlock_entry(product)
-				unlocked_any = true
+				if(JournalManager.unlock_entry(product)):
+					unlocked_any = true
 
 			if products.size() > 1:
 				show_feedback(
@@ -287,7 +287,7 @@ func resolve_reaction():
 				)
 			else:
 				show_feedback(
-					"Journal updated",
+					"Reaction already is in journal",
 					Color(0.6, 0.8, 1.0)
 				)
 

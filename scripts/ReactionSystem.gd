@@ -3,11 +3,12 @@ extends Node
 var reactions: Dictionary = {}
 
 func _ready():
-	reactions = load_reactions_from_csv("res://assets/resources/reactii_final.csv")
+	reactions = load_reactions_from_csv("res://assets/resources/reactii_final.txt")
 
 func load_reactions_from_csv(path: String) -> Dictionary:
 	var result: Dictionary = {}
 
+	print(FileAccess.file_exists("res://assets/resources/reactii_final.txt"))
 	var file = FileAccess.open(path, FileAccess.READ)
 	if file == null:
 		push_error("Cannot open file: " + path)
